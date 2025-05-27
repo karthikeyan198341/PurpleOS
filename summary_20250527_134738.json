@@ -1,0 +1,64 @@
+{
+  "total_tests": 32,
+  "passed": 23,
+  "failed": 9,
+  "warnings": 0,
+  "errors": 0,
+  "pass_rate": 71.875,
+  "total_duration": 163.814733,
+  "test_categories": {
+    "Configuration Collection": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1
+    },
+    "Trees Collection": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0
+    },
+    "Data Collection": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0
+    },
+    "UBUS Testing": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0
+    },
+    "UCI Configuration": {
+      "total": 5,
+      "passed": 5,
+      "failed": 0
+    },
+    "Linux Tools": {
+      "total": 10,
+      "passed": 10,
+      "failed": 0
+    },
+    "UCI-CLI": {
+      "total": 5,
+      "passed": 5,
+      "failed": 0
+    },
+    "TR-181 Data Model": {
+      "total": 8,
+      "passed": 0,
+      "failed": 8
+    }
+  },
+  "device_info": {
+    "model": "DEVICE_MANUFACTURER='OpenWrt'\nDEVICE_MANUFACTURER_URL='https://openwrt.org/'\nDEVICE_PRODUCT='Generic'\nDEVICE_REVISION='v0'",
+    "firmware_version": "DISTRIB_ID='OpenWrt'\nDISTRIB_RELEASE='3.1.0-fb56b6bb'\nDISTRIB_REVISION='r24617-fb56b6bb47'\nDISTRIB_TARGET='brcmbca/bcm96766'\nDISTRIB_ARCH='arm_cortex-a7'\nDISTRIB_DESCRIPTION='OpenWrt 3.1.0-fb56b6bb r24617-fb56b6bb47'\nDISTRIB_TAINTS='no-all glibc busybox'",
+    "kernel_version": "5.15.167",
+    "uptime": "20:16:08 up  3:34,  0 users,  load average: 0.00, 0.01, 0.00",
+    "memory_total": "1005144",
+    "memory_free": "127276",
+    "cpu_info": "model name\t: ARMv7 Processor rev 5 (v7l)",
+    "network_interfaces": [],
+    "variant": "Unknown_Device"
+  },
+  "test_start_time": "2025-05-27 13:44:54.097374",
+  "test_end_time": "2025-05-27 13:47:38.590819"
+}

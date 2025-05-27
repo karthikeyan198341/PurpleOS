@@ -1,0 +1,367 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Purple OS Test Report</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 20px; background-color: #f5f5f5; }
+                .header { background-color: #6a1b9a; color: white; padding: 20px; border-radius: 5px; }
+                .summary { background-color: white; padding: 20px; margin: 20px 0; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+                .metric { display: inline-block; margin: 10px 20px; }
+                .metric-value { font-size: 24px; font-weight: bold; }
+                .metric-label { color: #666; }
+                .passed { color: #4caf50; }
+                .failed { color: #f44336; }
+                .warning { color: #ff9800; }
+                table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+                th { background-color: #6a1b9a; color: white; padding: 10px; text-align: left; }
+                td { padding: 8px; border-bottom: 1px solid #ddd; }
+                .test-pass { background-color: #e8f5e9; }
+                .test-fail { background-color: #ffebee; }
+                .test-warn { background-color: #fff3e0; }
+            </style>
+        </head>
+        <body>
+            <div class="header">
+                <h1>Purple OS Automated Test Report</h1>
+                <p>Generated: 2025-05-27 13:47:38</p>
+                <p>Device: Unknown_Device</p>
+            </div>
+            
+            <div class="summary">
+                <h2>Test Summary</h2>
+                <div class="metric">
+                    <div class="metric-value">32</div>
+                    <div class="metric-label">Total Tests</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value passed">23</div>
+                    <div class="metric-label">Passed</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value failed">9</div>
+                    <div class="metric-label">Failed</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">71.9%</div>
+                    <div class="metric-label">Pass Rate</div>
+                </div>
+            </div>
+            
+            <div class="summary">
+                <h2>Test Results by Category</h2>
+                <table>
+                    <tr>
+                        <th>Category</th>
+                        <th>Total</th>
+                        <th>Passed</th>
+                        <th>Failed</th>
+                        <th>Pass Rate</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Configuration Collection</td>
+                        <td>1</td>
+                        <td class="passed">0</td>
+                        <td class="failed">1</td>
+                        <td>0.0%</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Trees Collection</td>
+                        <td>1</td>
+                        <td class="passed">1</td>
+                        <td class="failed">0</td>
+                        <td>100.0%</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Data Collection</td>
+                        <td>1</td>
+                        <td class="passed">1</td>
+                        <td class="failed">0</td>
+                        <td>100.0%</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>UBUS Testing</td>
+                        <td>1</td>
+                        <td class="passed">1</td>
+                        <td class="failed">0</td>
+                        <td>100.0%</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>UCI Configuration</td>
+                        <td>5</td>
+                        <td class="passed">5</td>
+                        <td class="failed">0</td>
+                        <td>100.0%</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Linux Tools</td>
+                        <td>10</td>
+                        <td class="passed">10</td>
+                        <td class="failed">0</td>
+                        <td>100.0%</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>UCI-CLI</td>
+                        <td>5</td>
+                        <td class="passed">5</td>
+                        <td class="failed">0</td>
+                        <td>100.0%</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>TR-181 Data Model</td>
+                        <td>8</td>
+                        <td class="passed">0</td>
+                        <td class="failed">8</td>
+                        <td>0.0%</td>
+                    </tr>
+                    
+                </table>
+            </div>
+            
+            <div class="summary">
+                <h2>Detailed Test Results</h2>
+                <table>
+                    <tr>
+                        <th>Test Name</th>
+                        <th>Category</th>
+                        <th>Status</th>
+                        <th>Duration (s)</th>
+                    </tr>
+                    
+                    <tr class="test-fail">
+                        <td>FWB_Configs_Collection</td>
+                        <td>Configuration Collection</td>
+                        <td>FAIL</td>
+                        <td>15.588</td>
+                    </tr>
+                    
+                    <tr class="test-pass">
+                        <td>Transformer_Trees_Dump</td>
+                        <td>Trees Collection</td>
+                        <td>PASS</td>
+                        <td>0.847</td>
+                    </tr>
+                    
+                    <tr class="test-pass">
+                        <td>System_Data_Collection</td>
+                        <td>Data Collection</td>
+                        <td>PASS</td>
+                        <td>6.775</td>
+                    </tr>
+                    
+                    <tr class="test-pass">
+                        <td>UBUS_Call_Testing</td>
+                        <td>UBUS Testing</td>
+                        <td>PASS</td>
+                        <td>127.021</td>
+                    </tr>
+                    
+                    <tr class="test-pass">
+                        <td>UCI_system_show</td>
+                        <td>UCI Configuration</td>
+                        <td>PASS</td>
+                        <td>0.241</td>
+                    </tr>
+                    
+                    <tr class="test-pass">
+                        <td>Linux_System_Uptime</td>
+                        <td>Linux Tools</td>
+                        <td>PASS</td>
+                        <td>0.252</td>
+                    </tr>
+                    
+                    <tr class="test-pass">
+                        <td>UCI-CLI_system_get</td>
+                        <td>UCI-CLI</td>
+                        <td>PASS</td>
+                        <td>0.226</td>
+                    </tr>
+                    
+                    <tr class="test-pass">
+                        <td>Linux_Memory_Usage</td>
+                        <td>Linux Tools</td>
+                        <td>PASS</td>
+                        <td>0.214</td>
+                    </tr>
+                    
+                    <tr class="test-pass">
+                        <td>UCI_network_show</td>
+                        <td>UCI Configuration</td>
+                        <td>PASS</td>
+                        <td>0.231</td>
+                    </tr>
+                    
+                    <tr class="test-pass">
+                        <td>Linux_Disk_Usage</td>
+                        <td>Linux Tools</td>
+                        <td>PASS</td>
+                        <td>0.230</td>
+                    </tr>
+                    
+                    <tr class="test-pass">
+                        <td>UCI-CLI_network_get</td>
+                        <td>UCI-CLI</td>
+                        <td>PASS</td>
+                        <td>0.218</td>
+                    </tr>
+                    
+                    <tr class="test-pass">
+                        <td>Linux_Top_Processes</td>
+                        <td>Linux Tools</td>
+                        <td>PASS</td>
+                        <td>0.274</td>
+                    </tr>
+                    
+                    <tr class="test-pass">
+                        <td>UCI_wireless_show</td>
+                        <td>UCI Configuration</td>
+                        <td>PASS</td>
+                        <td>0.177</td>
+                    </tr>
+                    
+                    <tr class="test-pass">
+                        <td>Linux_Network_Connections</td>
+                        <td>Linux Tools</td>
+                        <td>PASS</td>
+                        <td>0.182</td>
+                    </tr>
+                    
+                    <tr class="test-fail">
+                        <td>TR181_Device_DeviceInfo_Manufacturer</td>
+                        <td>TR-181 Data Model</td>
+                        <td>FAIL</td>
+                        <td>1.186</td>
+                    </tr>
+                    
+                    <tr class="test-pass">
+                        <td>UCI-CLI_wireless_get</td>
+                        <td>UCI-CLI</td>
+                        <td>PASS</td>
+                        <td>0.214</td>
+                    </tr>
+                    
+                    <tr class="test-pass">
+                        <td>Linux_Loaded_Modules</td>
+                        <td>Linux Tools</td>
+                        <td>PASS</td>
+                        <td>0.210</td>
+                    </tr>
+                    
+                    <tr class="test-pass">
+                        <td>UCI_firewall_show</td>
+                        <td>UCI Configuration</td>
+                        <td>PASS</td>
+                        <td>0.162</td>
+                    </tr>
+                    
+                    <tr class="test-pass">
+                        <td>Linux_Kernel_Messages</td>
+                        <td>Linux Tools</td>
+                        <td>PASS</td>
+                        <td>0.207</td>
+                    </tr>
+                    
+                    <tr class="test-pass">
+                        <td>UCI-CLI_firewall_get</td>
+                        <td>UCI-CLI</td>
+                        <td>PASS</td>
+                        <td>0.165</td>
+                    </tr>
+                    
+                    <tr class="test-pass">
+                        <td>Linux_CPU_Count</td>
+                        <td>Linux Tools</td>
+                        <td>PASS</td>
+                        <td>0.308</td>
+                    </tr>
+                    
+                    <tr class="test-pass">
+                        <td>UCI_dhcp_show</td>
+                        <td>UCI Configuration</td>
+                        <td>PASS</td>
+                        <td>0.288</td>
+                    </tr>
+                    
+                    <tr class="test-pass">
+                        <td>Linux_Total_Memory</td>
+                        <td>Linux Tools</td>
+                        <td>PASS</td>
+                        <td>0.215</td>
+                    </tr>
+                    
+                    <tr class="test-pass">
+                        <td>UCI-CLI_dhcp_get</td>
+                        <td>UCI-CLI</td>
+                        <td>PASS</td>
+                        <td>0.190</td>
+                    </tr>
+                    
+                    <tr class="test-fail">
+                        <td>TR181_Device_DeviceInfo_ModelName</td>
+                        <td>TR-181 Data Model</td>
+                        <td>FAIL</td>
+                        <td>1.091</td>
+                    </tr>
+                    
+                    <tr class="test-pass">
+                        <td>Linux_Network_Interfaces</td>
+                        <td>Linux Tools</td>
+                        <td>PASS</td>
+                        <td>0.365</td>
+                    </tr>
+                    
+                    <tr class="test-fail">
+                        <td>TR181_Device_DeviceInfo_SerialNumber</td>
+                        <td>TR-181 Data Model</td>
+                        <td>FAIL</td>
+                        <td>1.028</td>
+                    </tr>
+                    
+                    <tr class="test-fail">
+                        <td>TR181_Device_DeviceInfo_SoftwareVersion</td>
+                        <td>TR-181 Data Model</td>
+                        <td>FAIL</td>
+                        <td>1.179</td>
+                    </tr>
+                    
+                    <tr class="test-fail">
+                        <td>TR181_Device_DeviceInfo_HardwareVersion</td>
+                        <td>TR-181 Data Model</td>
+                        <td>FAIL</td>
+                        <td>1.119</td>
+                    </tr>
+                    
+                    <tr class="test-fail">
+                        <td>TR181_Device_LAN_IPAddress</td>
+                        <td>TR-181 Data Model</td>
+                        <td>FAIL</td>
+                        <td>1.089</td>
+                    </tr>
+                    
+                    <tr class="test-fail">
+                        <td>TR181_Device_LAN_SubnetMask</td>
+                        <td>TR-181 Data Model</td>
+                        <td>FAIL</td>
+                        <td>1.152</td>
+                    </tr>
+                    
+                    <tr class="test-fail">
+                        <td>TR181_Device_WiFi_Radio_1_Enable</td>
+                        <td>TR-181 Data Model</td>
+                        <td>FAIL</td>
+                        <td>1.173</td>
+                    </tr>
+                    
+                </table>
+            </div>
+        </body>
+        </html>
+        

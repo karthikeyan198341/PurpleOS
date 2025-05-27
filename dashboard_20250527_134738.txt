@@ -1,0 +1,26 @@
+Purple OS Test Dashboard - Unknown_Device
+============================================================
+
+Generated: 2025-05-27 13:47:38
+Device: Unknown_Device
+Firmware: DISTRIB_ID='OpenWrt'
+DISTRIB_RELEASE='3.1.0-fb56b6...
+
+Test Summary
+------------------------------
+Total Tests: 32
+Passed: 23 (71.9%)
+Failed: 9
+Warnings: 0
+Duration: 163.81s
+
+Category Summary
+------------------------------
+Configuration Collection...... 0/1 (0.0%)
+Trees Collection.............. 1/1 (100.0%)
+Data Collection............... 1/1 (100.0%)
+UBUS Testing.................. 1/1 (100.0%)
+UCI Configuration............. 5/5 (100.0%)
+Linux Tools................... 10/10 (100.0%)
+UCI-CLI....................... 5/5 (100.0%)
+TR-181 Data Model............. 0/8 (0.0%)

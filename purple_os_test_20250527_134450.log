@@ -1,0 +1,290 @@
+2025-05-27 13:44:50,371 - SSHConnectionPool - INFO - Created connection 1/10
+2025-05-27 13:44:50,603 - SSHConnectionPool - INFO - Created connection 2/10
+2025-05-27 13:44:50,831 - SSHConnectionPool - INFO - Created connection 3/10
+2025-05-27 13:44:51,047 - SSHConnectionPool - INFO - Created connection 4/10
+2025-05-27 13:44:51,263 - SSHConnectionPool - INFO - Created connection 5/10
+2025-05-27 13:44:51,480 - SSHConnectionPool - INFO - Created connection 6/10
+2025-05-27 13:44:51,698 - SSHConnectionPool - INFO - Created connection 7/10
+2025-05-27 13:44:51,872 - SSHConnectionPool - INFO - Created connection 8/10
+2025-05-27 13:44:52,047 - SSHConnectionPool - INFO - Created connection 9/10
+2025-05-27 13:44:52,259 - SSHConnectionPool - INFO - Created connection 10/10
+2025-05-27 13:44:52,490 - PurpleOSTestFramework - INFO - ================================================================================
+2025-05-27 13:44:52,491 - PurpleOSTestFramework - INFO - Starting Purple OS Automated Testing Suite (Native SSH)
+2025-05-27 13:44:52,491 - PurpleOSTestFramework - INFO - ================================================================================
+2025-05-27 13:44:52,491 - PurpleOSTestFramework - INFO - Getting device variant...
+2025-05-27 13:44:52,680 - PurpleOSTestFramework - ERROR - Failed to get device variant: uci: Entry not found
+
+2025-05-27 13:44:52,939 - PurpleOSTestFramework - WARNING - Could not determine device variant, using 'Unknown_Device'
+2025-05-27 13:44:52,941 - PurpleOSTestFramework - INFO - Created local folder: C:/Users/be_ka/Desktop/Unknown_Device_results_folder
+2025-05-27 13:44:52,941 - PurpleOSTestFramework - INFO - Collecting device information...
+2025-05-27 13:44:54,096 - PurpleOSTestFramework - INFO - Running integrated test suite...
+2025-05-27 13:44:54,096 - PurpleOSTestFramework - INFO - -------------Collecting FWB Configs-------------
+2025-05-27 13:44:54,270 - PurpleOSTestFramework - INFO - Files in /etc/config: ['acl-manager', 'amx-faultmonitor', 'amx-processmonitor', 'bcmSystem-manager', 'chrony', 'cthulhu', 'cwmp_plugin', 'ddns', 'deviceinfo-manager', 'deviceinfo-system', 'dhcp', 'dhcpv4-manager', 'dhcpv6s-manager', 'ethernet-manager', 'gmap-client', 'gmap-server', 'hosts-manager', 'ip-manager', 'lxc-auto', 'mcast', 'multisettings', 'netdev-plugin', 'netmodel', 'netmodel-clients', 'network', 'obuspa_param_reset.txt', 'openssl', 'packet-interception', 'pcm-manager', 'ports', 'power-manager', 'prplmesh', 'reboot-service', 'rlyeh', 'routing-manager', 'rpcd', 'samba4', 'ssh_server', 'system', 'time-manager', 'timingila', 'tr140-storage', 'tr181-bridging', 'tr181-button', 'tr181-captiveportal', 'tr181-device', 'tr181-dhcpv4client', 'tr181-dhcpv6client', 'tr181-dns', 'tr181-dnssd', 'tr181-dslite', 'tr181-dynamicdns', 'tr181-firewall', 'tr181-httpaccess', 'tr181-ipdiagnostics', 'tr181-ipsec', 'tr181-led', 'tr181-logical', 'tr181-mcast', 'tr181-neighbordiscovery', 'tr181-pcp', 'tr181-ppp', 'tr181-qos', 'tr181-routeradvertisement', 'tr181-security', 'tr181-syslog', 'tr181-upnp', 'tr181-usermanagement', 'tr181-xpon', 'tr471-obudpst', 'umdns', 'wan-manager', 'wireless', 'wld']
+2025-05-27 13:44:54,271 - PurpleOSTestFramework - INFO - Reading contents of acl-manager
+2025-05-27 13:44:54,497 - PurpleOSTestFramework - ERROR - Error reading acl-manager: cat: read error: Is a directory
+
+2025-05-27 13:44:54,497 - PurpleOSTestFramework - INFO - Reading contents of amx-faultmonitor
+2025-05-27 13:44:54,714 - PurpleOSTestFramework - ERROR - Error reading amx-faultmonitor: cat: read error: Is a directory
+
+2025-05-27 13:44:54,715 - PurpleOSTestFramework - INFO - Reading contents of amx-processmonitor
+2025-05-27 13:44:54,938 - PurpleOSTestFramework - ERROR - Error reading amx-processmonitor: cat: read error: Is a directory
+
+2025-05-27 13:44:54,939 - PurpleOSTestFramework - INFO - Reading contents of bcmSystem-manager
+2025-05-27 13:44:55,172 - PurpleOSTestFramework - ERROR - Error reading bcmSystem-manager: cat: read error: Is a directory
+
+2025-05-27 13:44:55,172 - PurpleOSTestFramework - INFO - Reading contents of chrony
+2025-05-27 13:44:55,364 - PurpleOSTestFramework - INFO - Reading contents of cthulhu
+2025-05-27 13:44:55,580 - PurpleOSTestFramework - ERROR - Error reading cthulhu: cat: read error: Is a directory
+
+2025-05-27 13:44:55,581 - PurpleOSTestFramework - INFO - Reading contents of cwmp_plugin
+2025-05-27 13:44:55,756 - PurpleOSTestFramework - ERROR - Error reading cwmp_plugin: cat: read error: Is a directory
+
+2025-05-27 13:44:55,756 - PurpleOSTestFramework - INFO - Reading contents of ddns
+2025-05-27 13:44:55,930 - PurpleOSTestFramework - INFO - Reading contents of deviceinfo-manager
+2025-05-27 13:44:56,113 - PurpleOSTestFramework - ERROR - Error reading deviceinfo-manager: cat: read error: Is a directory
+
+2025-05-27 13:44:56,114 - PurpleOSTestFramework - INFO - Reading contents of deviceinfo-system
+2025-05-27 13:44:56,305 - PurpleOSTestFramework - ERROR - Error reading deviceinfo-system: cat: read error: Is a directory
+
+2025-05-27 13:44:56,305 - PurpleOSTestFramework - INFO - Reading contents of dhcp
+2025-05-27 13:44:56,521 - PurpleOSTestFramework - INFO - Reading contents of dhcpv4-manager
+2025-05-27 13:44:56,696 - PurpleOSTestFramework - ERROR - Error reading dhcpv4-manager: cat: read error: Is a directory
+
+2025-05-27 13:44:56,696 - PurpleOSTestFramework - INFO - Reading contents of dhcpv6s-manager
+2025-05-27 13:44:56,870 - PurpleOSTestFramework - ERROR - Error reading dhcpv6s-manager: cat: read error: Is a directory
+
+2025-05-27 13:44:56,870 - PurpleOSTestFramework - INFO - Reading contents of ethernet-manager
+2025-05-27 13:44:57,047 - PurpleOSTestFramework - ERROR - Error reading ethernet-manager: cat: read error: Is a directory
+
+2025-05-27 13:44:57,047 - PurpleOSTestFramework - INFO - Reading contents of gmap-client
+2025-05-27 13:44:57,321 - PurpleOSTestFramework - ERROR - Error reading gmap-client: cat: read error: Is a directory
+
+2025-05-27 13:44:57,321 - PurpleOSTestFramework - INFO - Reading contents of gmap-server
+2025-05-27 13:44:57,536 - PurpleOSTestFramework - ERROR - Error reading gmap-server: cat: read error: Is a directory
+
+2025-05-27 13:44:57,537 - PurpleOSTestFramework - INFO - Reading contents of hosts-manager
+2025-05-27 13:44:57,770 - PurpleOSTestFramework - ERROR - Error reading hosts-manager: cat: read error: Is a directory
+
+2025-05-27 13:44:57,771 - PurpleOSTestFramework - INFO - Reading contents of ip-manager
+2025-05-27 13:44:57,946 - PurpleOSTestFramework - ERROR - Error reading ip-manager: cat: read error: Is a directory
+
+2025-05-27 13:44:57,947 - PurpleOSTestFramework - INFO - Reading contents of lxc-auto
+2025-05-27 13:44:58,166 - PurpleOSTestFramework - INFO - Reading contents of mcast
+2025-05-27 13:44:58,421 - PurpleOSTestFramework - INFO - Reading contents of multisettings
+2025-05-27 13:44:58,594 - PurpleOSTestFramework - ERROR - Error reading multisettings: cat: read error: Is a directory
+
+2025-05-27 13:44:58,595 - PurpleOSTestFramework - INFO - Reading contents of netdev-plugin
+2025-05-27 13:44:58,821 - PurpleOSTestFramework - ERROR - Error reading netdev-plugin: cat: read error: Is a directory
+
+2025-05-27 13:44:58,821 - PurpleOSTestFramework - INFO - Reading contents of netmodel
+2025-05-27 13:44:59,036 - PurpleOSTestFramework - ERROR - Error reading netmodel: cat: read error: Is a directory
+
+2025-05-27 13:44:59,036 - PurpleOSTestFramework - INFO - Reading contents of netmodel-clients
+2025-05-27 13:44:59,254 - PurpleOSTestFramework - ERROR - Error reading netmodel-clients: cat: read error: Is a directory
+
+2025-05-27 13:44:59,254 - PurpleOSTestFramework - INFO - Reading contents of network
+2025-05-27 13:44:59,475 - PurpleOSTestFramework - INFO - Reading contents of obuspa_param_reset.txt
+2025-05-27 13:44:59,696 - PurpleOSTestFramework - INFO - Reading contents of openssl
+2025-05-27 13:44:59,930 - PurpleOSTestFramework - INFO - Reading contents of packet-interception
+2025-05-27 13:45:00,145 - PurpleOSTestFramework - ERROR - Error reading packet-interception: cat: read error: Is a directory
+
+2025-05-27 13:45:00,145 - PurpleOSTestFramework - INFO - Reading contents of pcm-manager
+2025-05-27 13:45:00,352 - PurpleOSTestFramework - ERROR - Error reading pcm-manager: cat: read error: Is a directory
+
+2025-05-27 13:45:00,353 - PurpleOSTestFramework - INFO - Reading contents of ports
+2025-05-27 13:45:00,602 - PurpleOSTestFramework - INFO - Reading contents of power-manager
+2025-05-27 13:45:00,819 - PurpleOSTestFramework - ERROR - Error reading power-manager: cat: read error: Is a directory
+
+2025-05-27 13:45:00,820 - PurpleOSTestFramework - INFO - Reading contents of prplmesh
+2025-05-27 13:45:00,996 - PurpleOSTestFramework - INFO - Reading contents of reboot-service
+2025-05-27 13:45:01,224 - PurpleOSTestFramework - ERROR - Error reading reboot-service: cat: read error: Is a directory
+
+2025-05-27 13:45:01,225 - PurpleOSTestFramework - INFO - Reading contents of rlyeh
+2025-05-27 13:45:01,447 - PurpleOSTestFramework - ERROR - Error reading rlyeh: cat: read error: Is a directory
+
+2025-05-27 13:45:01,447 - PurpleOSTestFramework - INFO - Reading contents of routing-manager
+2025-05-27 13:45:01,664 - PurpleOSTestFramework - ERROR - Error reading routing-manager: cat: read error: Is a directory
+
+2025-05-27 13:45:01,665 - PurpleOSTestFramework - INFO - Reading contents of rpcd
+2025-05-27 13:45:01,895 - PurpleOSTestFramework - INFO - Reading contents of samba4
+2025-05-27 13:45:02,110 - PurpleOSTestFramework - INFO - Reading contents of ssh_server
+2025-05-27 13:45:02,327 - PurpleOSTestFramework - ERROR - Error reading ssh_server: cat: read error: Is a directory
+
+2025-05-27 13:45:02,327 - PurpleOSTestFramework - INFO - Reading contents of system
+2025-05-27 13:45:02,502 - PurpleOSTestFramework - INFO - Reading contents of time-manager
+2025-05-27 13:45:02,721 - PurpleOSTestFramework - ERROR - Error reading time-manager: cat: read error: Is a directory
+
+2025-05-27 13:45:02,722 - PurpleOSTestFramework - INFO - Reading contents of timingila
+2025-05-27 13:45:02,903 - PurpleOSTestFramework - ERROR - Error reading timingila: cat: read error: Is a directory
+
+2025-05-27 13:45:02,904 - PurpleOSTestFramework - INFO - Reading contents of tr140-storage
+2025-05-27 13:45:03,112 - PurpleOSTestFramework - ERROR - Error reading tr140-storage: cat: read error: Is a directory
+
+2025-05-27 13:45:03,112 - PurpleOSTestFramework - INFO - Reading contents of tr181-bridging
+2025-05-27 13:45:03,334 - PurpleOSTestFramework - ERROR - Error reading tr181-bridging: cat: read error: Is a directory
+
+2025-05-27 13:45:03,335 - PurpleOSTestFramework - INFO - Reading contents of tr181-button
+2025-05-27 13:45:03,553 - PurpleOSTestFramework - ERROR - Error reading tr181-button: cat: read error: Is a directory
+
+2025-05-27 13:45:03,553 - PurpleOSTestFramework - INFO - Reading contents of tr181-captiveportal
+2025-05-27 13:45:03,769 - PurpleOSTestFramework - ERROR - Error reading tr181-captiveportal: cat: read error: Is a directory
+
+2025-05-27 13:45:03,770 - PurpleOSTestFramework - INFO - Reading contents of tr181-device
+2025-05-27 13:45:03,945 - PurpleOSTestFramework - ERROR - Error reading tr181-device: cat: read error: Is a directory
+
+2025-05-27 13:45:03,946 - PurpleOSTestFramework - INFO - Reading contents of tr181-dhcpv4client
+2025-05-27 13:45:04,171 - PurpleOSTestFramework - ERROR - Error reading tr181-dhcpv4client: cat: read error: Is a directory
+
+2025-05-27 13:45:04,171 - PurpleOSTestFramework - INFO - Reading contents of tr181-dhcpv6client
+2025-05-27 13:45:04,386 - PurpleOSTestFramework - ERROR - Error reading tr181-dhcpv6client: cat: read error: Is a directory
+
+2025-05-27 13:45:04,386 - PurpleOSTestFramework - INFO - Reading contents of tr181-dns
+2025-05-27 13:45:04,568 - PurpleOSTestFramework - ERROR - Error reading tr181-dns: cat: read error: Is a directory
+
+2025-05-27 13:45:04,568 - PurpleOSTestFramework - INFO - Reading contents of tr181-dnssd
+2025-05-27 13:45:04,733 - PurpleOSTestFramework - ERROR - Error reading tr181-dnssd: cat: read error: Is a directory
+
+2025-05-27 13:45:04,734 - PurpleOSTestFramework - INFO - Reading contents of tr181-dslite
+2025-05-27 13:45:04,910 - PurpleOSTestFramework - ERROR - Error reading tr181-dslite: cat: read error: Is a directory
+
+2025-05-27 13:45:04,910 - PurpleOSTestFramework - INFO - Reading contents of tr181-dynamicdns
+2025-05-27 13:45:05,076 - PurpleOSTestFramework - ERROR - Error reading tr181-dynamicdns: cat: read error: Is a directory
+
+2025-05-27 13:45:05,076 - PurpleOSTestFramework - INFO - Reading contents of tr181-firewall
+2025-05-27 13:45:05,284 - PurpleOSTestFramework - ERROR - Error reading tr181-firewall: cat: read error: Is a directory
+
+2025-05-27 13:45:05,285 - PurpleOSTestFramework - INFO - Reading contents of tr181-httpaccess
+2025-05-27 13:45:05,452 - PurpleOSTestFramework - ERROR - Error reading tr181-httpaccess: cat: read error: Is a directory
+
+2025-05-27 13:45:05,453 - PurpleOSTestFramework - INFO - Reading contents of tr181-ipdiagnostics
+2025-05-27 13:45:05,636 - PurpleOSTestFramework - ERROR - Error reading tr181-ipdiagnostics: cat: read error: Is a directory
+
+2025-05-27 13:45:05,636 - PurpleOSTestFramework - INFO - Reading contents of tr181-ipsec
+2025-05-27 13:45:05,844 - PurpleOSTestFramework - ERROR - Error reading tr181-ipsec: cat: read error: Is a directory
+
+2025-05-27 13:45:05,845 - PurpleOSTestFramework - INFO - Reading contents of tr181-led
+2025-05-27 13:45:06,060 - PurpleOSTestFramework - ERROR - Error reading tr181-led: cat: read error: Is a directory
+
+2025-05-27 13:45:06,062 - PurpleOSTestFramework - INFO - Reading contents of tr181-logical
+2025-05-27 13:45:06,285 - PurpleOSTestFramework - ERROR - Error reading tr181-logical: cat: read error: Is a directory
+
+2025-05-27 13:45:06,286 - PurpleOSTestFramework - INFO - Reading contents of tr181-mcast
+2025-05-27 13:45:06,462 - PurpleOSTestFramework - ERROR - Error reading tr181-mcast: cat: read error: Is a directory
+
+2025-05-27 13:45:06,462 - PurpleOSTestFramework - INFO - Reading contents of tr181-neighbordiscovery
+2025-05-27 13:45:06,637 - PurpleOSTestFramework - ERROR - Error reading tr181-neighbordiscovery: cat: read error: Is a directory
+
+2025-05-27 13:45:06,639 - PurpleOSTestFramework - INFO - Reading contents of tr181-pcp
+2025-05-27 13:45:06,818 - PurpleOSTestFramework - ERROR - Error reading tr181-pcp: cat: read error: Is a directory
+
+2025-05-27 13:45:06,819 - PurpleOSTestFramework - INFO - Reading contents of tr181-ppp
+2025-05-27 13:45:06,994 - PurpleOSTestFramework - ERROR - Error reading tr181-ppp: cat: read error: Is a directory
+
+2025-05-27 13:45:06,995 - PurpleOSTestFramework - INFO - Reading contents of tr181-qos
+2025-05-27 13:45:07,217 - PurpleOSTestFramework - ERROR - Error reading tr181-qos: cat: read error: Is a directory
+
+2025-05-27 13:45:07,217 - PurpleOSTestFramework - INFO - Reading contents of tr181-routeradvertisement
+2025-05-27 13:45:07,425 - PurpleOSTestFramework - ERROR - Error reading tr181-routeradvertisement: cat: read error: Is a directory
+
+2025-05-27 13:45:07,426 - PurpleOSTestFramework - INFO - Reading contents of tr181-security
+2025-05-27 13:45:07,635 - PurpleOSTestFramework - ERROR - Error reading tr181-security: cat: read error: Is a directory
+
+2025-05-27 13:45:07,635 - PurpleOSTestFramework - INFO - Reading contents of tr181-syslog
+2025-05-27 13:45:07,859 - PurpleOSTestFramework - ERROR - Error reading tr181-syslog: cat: read error: Is a directory
+
+2025-05-27 13:45:07,859 - PurpleOSTestFramework - INFO - Reading contents of tr181-upnp
+2025-05-27 13:45:08,117 - PurpleOSTestFramework - ERROR - Error reading tr181-upnp: cat: read error: Is a directory
+
+2025-05-27 13:45:08,118 - PurpleOSTestFramework - INFO - Reading contents of tr181-usermanagement
+2025-05-27 13:45:08,384 - PurpleOSTestFramework - ERROR - Error reading tr181-usermanagement: cat: read error: Is a directory
+
+2025-05-27 13:45:08,384 - PurpleOSTestFramework - INFO - Reading contents of tr181-xpon
+2025-05-27 13:45:08,600 - PurpleOSTestFramework - ERROR - Error reading tr181-xpon: cat: read error: Is a directory
+
+2025-05-27 13:45:08,601 - PurpleOSTestFramework - INFO - Reading contents of tr471-obudpst
+2025-05-27 13:45:08,817 - PurpleOSTestFramework - ERROR - Error reading tr471-obudpst: cat: read error: Is a directory
+
+2025-05-27 13:45:08,818 - PurpleOSTestFramework - INFO - Reading contents of umdns
+2025-05-27 13:45:09,029 - PurpleOSTestFramework - INFO - Reading contents of wan-manager
+2025-05-27 13:45:09,251 - PurpleOSTestFramework - ERROR - Error reading wan-manager: cat: read error: Is a directory
+
+2025-05-27 13:45:09,251 - PurpleOSTestFramework - INFO - Reading contents of wireless
+2025-05-27 13:45:09,474 - PurpleOSTestFramework - INFO - Reading contents of wld
+2025-05-27 13:45:09,684 - PurpleOSTestFramework - ERROR - Error reading wld: cat: read error: Is a directory
+
+2025-05-27 13:45:09,685 - PurpleOSTestFramework - INFO - -------------Collecting Trees-------------
+2025-05-27 13:45:09,686 - PurpleOSTestFramework - INFO - Executing: transformer-cli get Device.
+2025-05-27 13:45:09,909 - PurpleOSTestFramework - ERROR - Error for tree Device.: ash: transformer-cli: not found
+
+2025-05-27 13:45:09,910 - PurpleOSTestFramework - INFO - Executing: transformer-cli get rpc.
+2025-05-27 13:45:10,134 - PurpleOSTestFramework - ERROR - Error for tree rpc.: ash: transformer-cli: not found
+
+2025-05-27 13:45:10,135 - PurpleOSTestFramework - INFO - Executing: transformer-cli get sys.
+2025-05-27 13:45:10,311 - PurpleOSTestFramework - ERROR - Error for tree sys.: ash: transformer-cli: not found
+
+2025-05-27 13:45:10,312 - PurpleOSTestFramework - INFO - Executing: transformer-cli get uci.
+2025-05-27 13:45:10,532 - PurpleOSTestFramework - ERROR - Error for tree uci.: ash: transformer-cli: not found
+
+2025-05-27 13:45:10,533 - PurpleOSTestFramework - INFO - -------------Collecting Data-------------
+2025-05-27 13:45:10,958 - PurpleOSTestFramework - INFO - Unknown_Device folder created in /tmp
+2025-05-27 13:45:10,959 - PurpleOSTestFramework - INFO - Executing: lsmod > /tmp/Unknown_Device/lsmod.txt
+2025-05-27 13:45:11,193 - PurpleOSTestFramework - INFO - Executing: uci show > /tmp/Unknown_Device/uci.txt
+2025-05-27 13:45:11,366 - PurpleOSTestFramework - INFO - Executing: df -h > /tmp/Unknown_Device/df.txt
+2025-05-27 13:45:11,582 - PurpleOSTestFramework - INFO - Executing: mount > /tmp/Unknown_Device/mount.txt
+2025-05-27 13:45:11,800 - PurpleOSTestFramework - INFO - Executing: ifconfig > /tmp/Unknown_Device/ifconfig.txt
+2025-05-27 13:45:12,007 - PurpleOSTestFramework - INFO - Executing: brctl show > /tmp/Unknown_Device/brctl.txt
+2025-05-27 13:45:12,235 - PurpleOSTestFramework - INFO - Executing: route -n > /tmp/Unknown_Device/route.txt
+2025-05-27 13:45:12,453 - PurpleOSTestFramework - INFO - Executing: iptables -S -t filter > /tmp/Unknown_Device/iptables-filter.txt
+2025-05-27 13:45:12,676 - PurpleOSTestFramework - INFO - Executing: iptables -S -t nat > /tmp/Unknown_Device/iptables-nat.txt
+2025-05-27 13:45:12,916 - PurpleOSTestFramework - INFO - Executing: iptables -S -t mangle > /tmp/Unknown_Device/iptables-mangle.txt
+2025-05-27 13:45:13,134 - PurpleOSTestFramework - INFO - Executing: iptables -S -t raw > /tmp/Unknown_Device/iptables-raw.txt
+2025-05-27 13:45:13,352 - PurpleOSTestFramework - INFO - Executing: ps > /tmp/Unknown_Device/ps.txt
+2025-05-27 13:45:13,580 - PurpleOSTestFramework - INFO - Executing: find / -type f -name '*.conf' 2>/dev/null | head -1000 > /tmp/Unknown_Device/conf_files.txt
+2025-05-27 13:45:17,307 - PurpleOSTestFramework - INFO - Data downloaded to: C:/Users/be_ka/Desktop/Unknown_Device_results_folder/Unknown_Device_data_folder
+2025-05-27 13:45:17,308 - PurpleOSTestFramework - INFO - -------------Collecting UBUS Data-------------
+2025-05-27 13:46:17,344 - NativeSSHConnection - ERROR - Command timed out: cd /usr/; grep ":call" -ri * 2>/dev/null | head -100
+2025-05-27 13:47:24,329 - NativeSSHConnection - ERROR - Command timed out: cd /usr/; grep "ubus call" -ri * 2>/dev/null | head -100
+2025-05-27 13:47:24,331 - PurpleOSTestFramework - INFO - 
+==================================================
+Execution Summary:
+Total UBUS Calls Found: 0
+Succeeded: 0
+Failed: 0
+Skipped: 0
+==================================================
+
+2025-05-27 13:47:24,331 - PurpleOSTestFramework - INFO - Enabling and collecting device logs...
+2025-05-27 13:47:28,965 - PurpleOSTestFramework - INFO - Collected log: system.log
+2025-05-27 13:47:29,182 - PurpleOSTestFramework - INFO - Collected log: kernel.log
+2025-05-27 13:47:29,549 - PurpleOSTestFramework - INFO - Collected log: messages.log
+2025-05-27 13:47:29,551 - PurpleOSTestFramework - INFO - Device logs collected in: test_logs/device_logs_20250527_134724
+2025-05-27 13:47:29,551 - PurpleOSTestFramework - INFO - Starting parallel test execution with 10 workers...
+2025-05-27 13:47:29,573 - PurpleOSTestFramework - INFO - Testing TR-181 data model...
+2025-05-27 13:47:29,575 - PurpleOSTestFramework - INFO - Testing UCI configuration...
+2025-05-27 13:47:29,579 - PurpleOSTestFramework - INFO - Testing Linux tools...
+2025-05-27 13:47:31,689 - PurpleOSTestFramework - INFO - Completed: test_uci_configuration - 10 tests
+2025-05-27 13:47:32,037 - PurpleOSTestFramework - INFO - Completed: test_linux_tools - 10 tests
+2025-05-27 13:47:38,590 - PurpleOSTestFramework - INFO - Completed: test_tr181_data_model - 8 tests
+2025-05-27 13:47:38,593 - PurpleOSTestFramework - INFO - Generating HTML report...
+2025-05-27 13:47:38,762 - PurpleOSTestFramework - INFO - HTML report generated: test_reports/test_report_20250527_134738.html
+2025-05-27 13:47:38,762 - PurpleOSTestFramework - INFO - Generating text dashboard...
+2025-05-27 13:47:38,764 - PurpleOSTestFramework - INFO - Dashboard generated: test_dashboards/dashboard_20250527_134738.txt
+2025-05-27 13:47:38,782 - PurpleOSTestFramework - INFO - ================================================================================
+2025-05-27 13:47:38,782 - PurpleOSTestFramework - INFO - TEST EXECUTION SUMMARY
+2025-05-27 13:47:38,783 - PurpleOSTestFramework - INFO - ================================================================================
+2025-05-27 13:47:38,783 - PurpleOSTestFramework - INFO - Device Variant: Unknown_Device
+2025-05-27 13:47:38,785 - PurpleOSTestFramework - INFO - Total Tests: 32
+2025-05-27 13:47:38,785 - PurpleOSTestFramework - INFO - Passed: 23 (71.9%)
+2025-05-27 13:47:38,785 - PurpleOSTestFramework - INFO - Failed: 9
+2025-05-27 13:47:38,786 - PurpleOSTestFramework - INFO - Duration: 163.81 seconds
+2025-05-27 13:47:38,786 - PurpleOSTestFramework - INFO - --------------------------------------------------------------------------------
+2025-05-27 13:47:38,786 - PurpleOSTestFramework - INFO - Output Files:
+2025-05-27 13:47:38,787 - PurpleOSTestFramework - INFO - Config folder: C:/Users/be_ka/Desktop/Unknown_Device_results_folder/Unknown_Device_configs_folder/combined_configs_Unknown_Device.txt
+2025-05-27 13:47:38,787 - PurpleOSTestFramework - INFO - Trees dump: C:/Users/be_ka/Desktop/Unknown_Device_results_folder/Unknown_Device_trees_dump_folder/trees_dump_Unknown_Device.txt
+2025-05-27 13:47:38,788 - PurpleOSTestFramework - INFO - Data collection: C:/Users/be_ka/Desktop/Unknown_Device_results_folder/Unknown_Device_data_folder
+2025-05-27 13:47:38,789 - PurpleOSTestFramework - INFO - UBUS data: C:/Users/be_ka/Desktop/Unknown_Device_results_folder/Unknown_Device_ubus_folder/combined_ubus_Unknown_Device.txt
+2025-05-27 13:47:38,790 - PurpleOSTestFramework - INFO - HTML Report: test_reports/test_report_20250527_134738.html
+2025-05-27 13:47:38,790 - PurpleOSTestFramework - INFO - Dashboard: test_dashboards/dashboard_20250527_134738.txt
+2025-05-27 13:47:38,791 - PurpleOSTestFramework - INFO - Summary JSON: test_reports/summary_20250527_134738.json
+2025-05-27 13:47:38,792 - PurpleOSTestFramework - INFO - Logs: test_logs/device_logs_20250527_134724
+2025-05-27 13:47:38,792 - PurpleOSTestFramework - INFO - ================================================================================

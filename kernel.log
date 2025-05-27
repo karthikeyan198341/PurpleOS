@@ -1,0 +1,1767 @@
+Booting Linux on physical CPU 0x0
+Linux version 5.15.167 (jsp@0504a82edf4a) (arm-buildroot-linux-gnueabihf-gcc.br_real (Buildroot 2024.02.1) 13.2.0, GNU ld (GNU Binutils) 2.41) #1 SMP PREEMPT Fri Mar 28 17:19:17 KST 2025
+CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=30c5387d
+CPU: div instructions available: patching division code
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt: Machine model: Broadcom BCM96766
+earlycon: pl11 at MMIO 0x00000000ff812000 (options '115200n8')
+printk: bootconsole [pl11] enabled
+Memory policy: Data cache writealloc
+Reserved memory: created CMA memory pool at 0x000000001e400000, size 284 MiB
+OF: reserved mem: initialized node dt_reserved_cma, compatible id shared-dma-pool
+OF: reserved mem: 0x000000001e400000..0x000000002fffffff (290816 KiB) map reusable dt_reserved_cma
+cma: Reserved 48 MiB at 0x000000003d000000
+Zone ranges:
+  DMA      [mem 0x0000000000000000-0x000000002fffffff]
+  Normal   empty
+  HighMem  [mem 0x0000000030000000-0x000000003fffffff]
+Movable zone start for each node
+Early memory node ranges
+  node   0: [mem 0x0000000000000000-0x000000003fffffff]
+Initmem setup node 0 [mem 0x0000000000000000-0x000000003fffffff]
+psci: probing for conduit method from DT.
+psci: PSCIv1.1 detected in firmware.
+psci: Using standard PSCI v0.2 function IDs
+psci: MIGRATE_INFO_TYPE not supported.
+psci: SMC Calling Convention v65535.65535
+percpu: Embedded 11 pages/cpu s13388 r8192 d23476 u45056
+pcpu-alloc: s13388 r8192 d23476 u45056 alloc=11*4096
+pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 
+Built 1 zonelists, mobility grouping on.  Total pages: 260416
+Kernel command line: coherent_pool=4M cpuidle_sysfs_switch pci=pcie_bus_safe console=ttyAMA0,115200 earlycon rootwait rng_core.default_quality=1024 mtdparts=brcmnand.0:2097152(loader),533725184@2097152(image) root=/dev/ubiblock0_6 ubi.mtd=image ubi.block=0,6 rootfstype=squashfs cma=48M
+Unknown kernel command line parameters "cpuidle_sysfs_switch", will be passed to user space.
+Dentry cache hash table entries: 131072 (order: 7, 524288 bytes, linear)
+Inode-cache hash table entries: 65536 (order: 6, 262144 bytes, linear)
+mem auto-init: stack:off, heap alloc:off, heap free:off
+Memory: 663128K/1048576K available (10240K kernel code, 732K rwdata, 1788K rodata, 2048K init, 1844K bss, 45480K reserved, 339968K cma-reserved, 212992K highmem)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+rcu: Preemptible hierarchical RCU implementation.
+	Trampoline variant of Tasks RCU enabled.
+rcu: RCU calculated value of scheduler-enlistment delay is 100 jiffies.
+NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+kfence: initialized - using 16785408 bytes for 2048 objects at 0x(ptrval)-0x(ptrval)
+map_hw_timer_interrupt,160: interrupt_id 24
+map_hw_timer_interrupt,160: interrupt_id 25
+map_hw_timer_interrupt,160: interrupt_id 26
+map_hw_timer_interrupt,160: interrupt_id 27
+clocksource: timer_cs: mask: 0xffffffffffffff max_cycles: 0x127350b881, max_idle_ns: 440795202125 ns
+sched_clock: 56 bits at 80MHz, resolution 12ns, wraps every 4398046511100ns
+Calibrating delay loop... 3981.31 BogoMIPS (lpj=1990656)
+CPU: Testing write buffer coherency: ok
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 2048 (order: 1, 8192 bytes, linear)
+Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes, linear)
+Setting up static identity map for 0x200000 - 0x200060
+rcu: Hierarchical SRCU implementation.
+init_boot_device 0 0
+CCB hardware cache coherency enabled
+Boot Device: NAND 2K Page
+Boot Device: NAND 2K Page
+Boot Device: NAND 2K Page
+smp: Bringing up secondary CPUs ...
+smp: Brought up 1 node, 4 CPUs
+SMP: Total of 4 processors activated (15925.24 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+devtmpfs: initialized
+VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+futex hash table entries: 1024 (order: 4, 65536 bytes, linear)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered PF_NETLINK/PF_ROUTE protocol family
+OTP driver initcall
+OTP driver scanning DT
+Strap driver initcall
+init_boot_device 0 0
+Strap Register: 0x7fffef42
+DMA: preallocated 4096 KiB pool for atomic coherent allocations
+thermal_sys: Registered thermal governor 'bang_bang'
+thermal_sys: Registered thermal governor 'step_wise'
+cpuidle: using governor ladder
+PMC driver initcall
+PMC driver scanning DT
+ not match PMC
+pmc match PMC brcm,bca-pmc-3-2
+     Remapping PMC IO memories...
+             phys              virt          size
+     0x00000000ffb01018 0x00000000f0c20018 0x00005080
+     0x00000000ffb20000 0x00000000f0c1a000 0x00000240
+     0x00000000ffb00400 0x00000000f0c1c400 0x000005d0
+     0x00000000ffb80000 0x00000000f0c27000 0x00001000
+pmc_init:PMC using DQM mode
+BCM UBUS Driver initcall
+ubus systop  		 phys addr 0x0000000083000000 virt addr 0xf0c2b000
+ubus registration  	 phys addr 0x0000000083000200 virt addr 0xf0c2d200
+ubus mst node BIU	 phys addr 0x0000000083020000 virt addr 0xf0c30000
+ubus mst node PER	 phys addr 0x0000000083010000 virt addr 0xf0c38000
+ubus mst node USB	 phys addr 0x0000000083048000 virt addr 0xf0c40000
+ubus mst node SPU	 phys addr 0x0000000083040000 virt addr 0xf0c48000
+ubus mst node PCIE0	 phys addr 0x0000000083030000 virt addr 0xf0c50000
+ubus mst node PCIE1	 phys addr 0x0000000083038000 virt addr 0xf0c58000
+ubus mst node CNPTOP	 phys addr 0x0000000083050000 virt addr 0xf0c60000
+ubus mst node CNPPHY	 phys addr 0x0000000083058000 virt addr 0xf0c68000
+ubus mst node WIFI0	 phys addr 0x0000000083060000 virt addr 0xf0c70000
+ubus mst node WIFI1	 phys addr 0x0000000083068000 virt addr 0xf0c78000
+ubus mst node MLO0	 phys addr 0x0000000083070000 virt addr 0xf0c80000
+ubus mst node MLO1	 phys addr 0x0000000083078000 virt addr 0xf0c88000
+Serial: AMBA PL011 UART driver
+bcm_rsvmem plat_rsvmem_cached_device: assigned reserved memory node dt_reserved_cma
+reserved CMA memory bufmem virt addr de400000 phys addr 0x000000001e400000 size 0x10000000 cached=1
+reserved CMA memory rnrmem virt addr ee400000 phys addr 0x000000002e400000 size 0xd00000 cached=1
+bcm_rsvmem plat_rsvmem_uncached_device: assigned reserved memory node dt_reserved_cma
+reserved CMA memory dhd0 virt addr ef100000 phys addr 0x000000002f100000 size 0xe00000 cached=0
+brcm_otp_init entry
+bcm-bca-gpio ff800500.gpioc: Setting up BCA GPIO controller 
+gpio-4 (wifi_6g_rf_dis): hogged as output/high
+gpio-16 (wifi_5g_pwr): hogged as output/high
+gpio-3 (pok_soc): hogged as input
+gpio-32 (hw_rev_0): hogged as input
+gpio-33 (hw_rev_1): hogged as input
+gpio-34 (hw_rev_2): hogged as input
+bca_extintr ff800004.bca_extintr0: Ext_Int_0 HWIrq 80 virq 67
+bca_extintr ff800004.bca_extintr0: Ext_Int_1 HWIrq 81 virq 68
+bca_extintr ff800004.bca_extintr0: Ext_Int_2 HWIrq 82 virq 69
+bca_extintr ff800004.bca_extintr0: Ext_Int_3 HWIrq 83 virq 70
+bca_extintr ff800004.bca_extintr0: Ext_Int_4 HWIrq 84 virq 71
+bca_extintr ff800004.bca_extintr0: Ext_Int_5 HWIrq 85 virq 72
+bca_extintr ff800004.bca_extintr0: Ext_Int_6 HWIrq 86 virq 73
+bca_extintr ff800004.bca_extintr0: Ext_Int_7 HWIrq 87 virq 74
+bca_extintr ff800004.bca_extintr0: Readed resouce bca_extintr0 start 0xff800004 end 0xff80004b
+ff812000.serial0: ttyAMA0 at MMIO 0xff812000 (irq = 75, base_baud = 0) is a PL011 rev3
+printk: console [ttyAMA0] enabled
+printk: bootconsole [pl11] disabled
+bcm-bca-cled-ctrl ff803000.led_ctrl: max supported leds 64[64]
+bcm-bca-cled-ctrl ff803000.led_ctrl:  Parallel CLED interface found
+bcm-bca-cled-ctrl ff803000.led_ctrl: BCA CLED Controller initialized
+bca_pmc ffb01018.pmc: IRQ pmc-irq not found
+IRQ virt [79] registered as pmc temp warning interrupt
+OF: /maintenance: could not get #gpio-cells for /periph/pinctrl/pincontroller-functions/nand_data_pinmux
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+bcm-dgasp ff85a004.dying_gasp: Dying Gasp platform device brcm,dgasp-periph matched
+dg-periph-reg: 0xff85a004<-->0xf0c99004:0x00000000
+dg-get-otp-trim: 0x00000001
+otp-dg-trim    : 0x00000000
+dg-get-otp-hys : 0x00000001
+otp-dg-hys     : 0x00000002
+#### [HMX] Dying Gasp Init ####
+DYING GASP IRQ Initialized and Enabled
+bcm-bca-leds ff803000.led_ctrl:sw_parallel_led_27: led 27 registered
+bcm-bca-leds ff803000.led_ctrl:sw_parallel_led_28: led 28 registered
+bcm-bca-leds ff803000.led_ctrl:sw_parallel_led_29: led 29 registered
+bcm-bca-leds ff803000.led_ctrl:sw_parallel_led_31: led 31 registered
+bcm-bca-leds ff803000.led_ctrl:gpio_led_35: led 35 registered
+bcm-bca-leds ff803000.led_ctrl:gpio_led_36: led 36 registered
+bca_extintr ff800004.bca_extintr0: GPIO 18 is mapped to ExtIntr_0 [virq 67]
+bca_extintr ff800004.bca_extintr0: GPIO 30 is mapped to ExtIntr_1 [virq 68]
+input: buttons as /devices/platform/buttons/input/input0
+Broadcom GBPMv0.1 initialized
+Broadcom IQoS v1.0 initialized
+Broadcom Logger v0.1
+Char device /dev/bcmnet(252) registered
+Assigning idx[1] for lo
+skb_free_task created successfully with start budget 32, period 10ms
+[0;34mBLOG v3.0 Initialized[0m
+BLOG Rule v1.0 Initialized
+ create_bcm_tcp_task:348 bind_mask:0x6
+bcm_tcp_task created successfully with budget 256 ,cpumask:0x6
+clocksource: Switched to clocksource timer_cs
+NET: Registered PF_INET protocol family
+IP idents hash table entries: 16384 (order: 5, 131072 bytes, linear)
+tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 6144 bytes, linear)
+Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+TCP established hash table entries: 8192 (order: 3, 32768 bytes, linear)
+TCP bind hash table entries: 8192 (order: 4, 65536 bytes, linear)
+TCP: Hash tables configured (established 8192 bind 8192)
+MPTCP token hash table entries: 1024 (order: 2, 16384 bytes, linear)
+UDP hash table entries: 512 (order: 2, 16384 bytes, linear)
+UDP-Lite hash table entries: 512 (order: 2, 16384 bytes, linear)
+NET: Registered PF_UNIX/PF_LOCAL protocol family
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Assigning idx[2] for blogtcp_local
+blogtcp_local netdev registered successfully 
+PCI: CLS 0 bytes, default 64
+Initialise system trusted keyrings
+workingset: timestamp_bits=14 max_order=18 bucket_order=4
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+ntfs3: Read-only LZX/Xpress compression included
+jffs2: version 2.2. (NAND) (SUMMARY)  © 2001-2006 Red Hat, Inc.
+Key type asymmetric registered
+Asymmetric key parser 'x509' registered
+io scheduler mq-deadline registered
+io scheduler kyber registered
+iproc-rng200 ff800b80.rng: hwrng registered
+random: crng init done
+bcmbca-trng ff803800.trng: bcmbca-trng registered
+brd: module loaded
+loop: module loaded
+nand: device found, Manufacturer ID: 0xad, Chip ID: 0xdc
+nand: Hynix HY27U4G8F2D ??512MiB?? 3.3V 8-bit
+nand: 512 MiB, SLC, erase size: 128 KiB, page size: 2048, OOB size: 64
+bcmbca_nand ff801800.nand: Adjust timing_1 to 0x6532845b timing_2 to 0x00091e94
+bcmbca_nand ff801800.nand: detected 512MiB total, 128KiB blocks, 2KiB pages, 16B OOB, 8-bit, BCH-4
+Bad block table found at page 262080, version 0x01
+Bad block table found at page 262016, version 0x01
+2 cmdlinepart partitions found on MTD device brcmnand.0
+Creating 2 MTD partitions on "brcmnand.0":
+0x000000000000-0x000000200000 : "loader"
+0x000000200000-0x00001ff00000 : "image"
+bcmbca-hsspi ff801000.spi: IRQ index 0 not found
+bcmbca-hsspi ff801000.spi: spi driver using polling mode
+bcmbca-hsspi ff801000.spi: Broadcom BCMBCA High Speed SPI Controller driver
+bcmbca-hsspi ff801000.spi: spi driver using polling mode
+Assigning idx[3] for dummy0
+Assigning idx[4] for ifb0
+Assigning idx[5] for ifb1
+PPP generic driver version 2.4.2
+PPP BSD Compression module registered
+PPP Deflate Compression module registered
+NET: Registered PF_PPPOX protocol family
+PPTP driver version 0.8.5
+usbcore: registered new interface driver asix
+usbcore: registered new interface driver ax88179_178a
+usbcore: registered new interface driver cdc_ether
+usbcore: registered new interface driver cdc_eem
+usbcore: registered new interface driver rndis_host
+usbcore: registered new interface driver cdc_ncm
+usbcore: registered new interface driver r8153_ecm
+i2c_dev: i2c /dev entries driver
+bcm96xxx-wdt ff800480.watchdog: Using clock  80000000
+SMCCC: SOC_ID: ARCH_SOC_ID not implemented, skipping ....
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+GACT probability NOT on
+Mirror/redirect action on
+Simple TC action Loaded
+Assigning idx[6] for teql0
+netem: version 1.3
+u32 classifier
+    input device check on
+    Actions configured
+gre: GRE over IPv4 demultiplexor driver
+ip_gre: GRE over IPv4 tunneling driver
+Assigning idx[7] for gre0
+Assigning idx[8] for gretap0
+Assigning idx[9] for erspan0
+Initializing XFRM netlink socket
+NET: Registered PF_INET6 protocol family
+Segment Routing with IPv6
+In-situ OAM (IOAM) with IPv6
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+Assigning idx[10] for sit0
+Assigning idx[11] for ip6tnl0
+ip6_gre: GRE over IPv6 tunneling driver
+Assigning idx[12] for ip6gre0
+NET: Registered PF_PACKET protocol family
+NET: Registered PF_KEY protocol family
+bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+l2tp_core: L2TP core driver, V2.0
+l2tp_ppp: PPPoL2TP kernel driver, V2.0
+8021q: 802.1Q VLAN Support v1.8
+sctp: Hash tables configured (bind 512/512)
+brcmboard registered
+brcmboard: brcm_board_init entry
+i2c-bcm63000 ff802100.i2c0: Broadcom BCM96xxx I2C driver
+bcm_memc 80060200.memory_controller: matched the memory controller to brcm,bcm-memc
+ioremapped reg phyctl_idle_pad_ctl <0x80060200 0x4> to f0d74200
+ioremapped reg phyctl_idle_pad_en0 <0x80060204 0x4> to f0d76204
+ioremapped reg phyctl_idle_pad_en1 <0x80060208 0x4> to f0d78208
+ioremapped reg phybl0_idle_pad_ctl <0x80060724 0x4> to f0d7a724
+ioremapped reg phybl1_idle_pad_ctl <0x80060924 0x4> to f0d7c924
+ioremapped reg phybl0_clock_idle <0x80060744 0x4> to f0d7e744
+ioremapped reg phybl1_clock_idle <0x80060944 0x4> to f0d80944
+ioremapped reg auto_self_refresh <0x8004000c 0x4> to f0d8200c
+ioremapped reg glb_gcfg <0x80040008 0x4> to f0d84008
+bcm_memc_get_spd_mhz: memcfg=0x121535 spd_mhz=1600
+bcm-ubus-dcm 83000080.ubus_dcm_sys: Broadcom BCA UBUS DCM Driver
+bcm-ubus-dcm 83000080.ubus_dcm_sys: ubus dcm clk resource [mem 0x83000080-0x830000ff flags 0x200]
+bcm-ubus-dcm 83000080.ubus_dcm_sys: map to virt addr 0xf0d86080
+remote_button_init: failed to register remote action for remote_button
+hmxboard registered
+hmxboard: hmx_board_init entry
+[HNE2306] H/W Board Revision : idx = 2, v0.3
+
+Optical detection module loaded.
+BOOT REASON 0x4024
+RESET STATUS 0x20000000
+Assigning idx[13] for blog_esp_us_dev
+Assigning idx[14] for blog_esp_ds_dev
+Bridge Broadcom hooks registered
+ebt_blog registered
+ebt_ftos registered
+ebt_qos_map registered
+ebt_time registered
+ebt_dscp registered
+ebt_vtag registered
+ebt_wmm_mark registered
+ebt_reject registered
+brcm-mdio 80486000.mdiosf2: registered
+MDIO Clock Divider Value: 12 Probe mode: No
+brcm-serdes1 80482000.serdes: registered
+brcm,eth-phy-top 80480000.ethphytop: registered
+swblks 80400000.swblks: registered
+brcm-ephyled 8048017c.ephyled: registered
+Registering SWP/SWPB emulation handler
+Loading compiled-in X.509 certificates
+ubi0: attaching mtd2
+ubi0: scanning is finished
+ubi0: attached mtd2 (name "image", size 509 MiB)
+ubi0: PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+ubi0: min./max. I/O unit sizes: 2048/2048, sub-page size 2048
+ubi0: VID header offset: 2048 (aligned 2048), data offset: 4096
+ubi0: good PEBs: 4072, bad PEBs: 0, corrupted PEBs: 0
+ubi0: user volume: 10, internal volumes: 1, max. volumes count: 128
+ubi0: max/mean erase counter: 71/37, WL threshold: 4096, image sequence number: 1262127063
+ubi0: available PEBs: 785, total reserved PEBs: 3287, PEBs reserved for bad PEB handling: 80
+ubi0: background thread "ubi_bgt0d" started, PID 270
+block ubiblock0_6: created from ubi0:6(rootfs2)
+Registered phy device: EGPHY:0x8
+Registered phy device: EXT3:0x14
+Registered phy device: 10GAE:0x6
+clk: Disabling unused clocks
+VFS: Mounted root (squashfs filesystem) readonly on device 254:0.
+devtmpfs: mounted
+Freeing unused kernel image (initmem) memory: 2048K
+Checked W+X mappings: passed, no W+X pages found
+Run /sbin/init as init process
+  with arguments:
+    /sbin/init
+    cpuidle_sysfs_switch
+  with environment:
+    HOME=/
+    TERM=linux
+init: Attempting to mount cgroups (tmpfs + controller subdirs)
+init: Mounted /sys/fs/cgroup/cpuset
+init: Mounted /sys/fs/cgroup/cpu
+init: Mounted /sys/fs/cgroup/cpuacct
+init: Mounted /sys/fs/cgroup/blkio
+init: Mounted /sys/fs/cgroup/memory
+init: Mounted /sys/fs/cgroup/devices
+init: Mounted /sys/fs/cgroup/freezer
+cgroup2: Unknown parameter 'none'
+init: Mounted /sys/fs/cgroup/systemd
+init: Console is alive
+init: - watchdog -
+kmodloader: loading kernel modules from /etc/modules-boot.d/*
+kmodloader: done loading kernel modules from /etc/modules-boot.d/*
+init: - preinit -
+mount_root: rootdisk_volume_find rootdev:/dev/ubiblock0_6
+UBIFS (ubi0:20): Mounting in unauthenticated mode
+UBIFS (ubi0:20): background thread "ubifs_bgt0_20" started, PID 395
+UBIFS (ubi0:20): recovery needed
+UBIFS (ubi0:20): recovery completed
+UBIFS (ubi0:20): UBIFS: mounted UBI device 0, volume 20, name "rootfs_data"
+UBIFS (ubi0:20): LEB size: 126976 bytes (124 KiB), min./max. I/O unit sizes: 2048 bytes/2048 bytes
+UBIFS (ubi0:20): FS size: 103485440 bytes (98 MiB, 815 LEBs), max 826 LEBs, journal size 5206016 bytes (4 MiB, 41 LEBs)
+UBIFS (ubi0:20): reserved for root: 4887873 bytes (4773 KiB)
+UBIFS (ubi0:20): media format: w5/r0 (latest is w5/r0), UUID A4368AE7-5DB9-4985-8BB6-C1C365450264, small LPT model
+mount_root: switching to ubifs overlay
+urandom-seed: Seeding with /etc/urandom.seed
+procd: - early -
+procd: - watchdog -
+procd: - watchdog -
+procd: - ubus -
+procd: - init -
+urngd: v1.0.2 started.
+kmodloader: loading kernel modules from /etc/modules.d/*
+kmodloader: done loading kernel modules from /etc/modules.d/*
+UBIFS (ubi0:10): Mounting in unauthenticated mode
+UBIFS (ubi0:10): background thread "ubifs_bgt0_10" started, PID 788
+UBIFS (ubi0:10): UBIFS: mounted UBI device 0, volume 10, name "data"
+UBIFS (ubi0:10): LEB size: 126976 bytes (124 KiB), min./max. I/O unit sizes: 2048 bytes/2048 bytes
+UBIFS (ubi0:10): FS size: 103485440 bytes (98 MiB, 815 LEBs), max 826 LEBs, journal size 5206016 bytes (4 MiB, 41 LEBs)
+UBIFS (ubi0:10): reserved for root: 4887873 bytes (4773 KiB)
+UBIFS (ubi0:10): media format: w5/r0 (latest is w5/r0), UUID DEF071F4-E811-439B-9E4A-37417CEBC334, small LPT model
+UBIFS (ubi0:11): Mounting in unauthenticated mode
+UBIFS (ubi0:11): background thread "ubifs_bgt0_11" started, PID 794
+UBIFS (ubi0:11): UBIFS: mounted UBI device 0, volume 11, name "defaults"
+UBIFS (ubi0:11): LEB size: 126976 bytes (124 KiB), min./max. I/O unit sizes: 2048 bytes/2048 bytes
+UBIFS (ubi0:11): FS size: 3047424 bytes (2 MiB, 24 LEBs), max 34 LEBs, journal size 1015809 bytes (0 MiB, 6 LEBs)
+UBIFS (ubi0:11): reserved for root: 143937 bytes (140 KiB)
+UBIFS (ubi0:11): media format: w5/r0 (latest is w5/r0), UUID 6AA656FB-E922-4174-A976-354BC499D2CB, small LPT model
+Initializing WLCSM Module
+WLCSM Module loaded successfully 
+BCMLIBS loaded...
+bcm_mpm: module license 'Proprietary' taints kernel.
+Disabling lock debugging due to kernel taint
+[0;36;44mBroadcom MPM Driver Initializing[0m
+Pool[0]: buffer_size 2688 bytes, min 3, alloc 3 EBUFs (3072 bytes)
+====> ebuf_size 1024: wastage 384
+Pool[0]: buffer_size 2688 bytes, min 2, alloc 2 EBUFs (4096 bytes)
+====> ebuf_size 2048: wastage 1408
+MPM: virt_base = 0xde400000, phys_base = 0x000000001e400000, total_mem_size = 268435456
+MPM: ebuf_size = 1024, ebuf_total = 262144/262144
+Pool[0]: buffer_size 2688 bytes, min 3, alloc 3 EBUFs (3072 bytes)
+Pool[1]: Disabled
+Pool[2]: Disabled
+Pool[3]: Disabled
+MPM Pool Numbers: SKB = 0, Data = 0
+MPM Registers are mapped to 0xf11b0000 (Phys@0x80220000)
+MPM Total Commands = 39/64
+MPM: ebuf_size 4, mpm_size_log2_kb 8
+MPM Enabled
+MPM Debug Timer Initialized
+[0;36;44mBroadcom HW Memory Pool Manager (MPM) Char Driver v0.1 Registered <342>[0m
+Broadcom BPM Module Char Driver v0.1 Registered<304>[0m
+Scratch pad is not initialized.
+Scratch pad is not initialized.
+Scratch pad is not initialized.
+Scratch pad is not initialized.
+Scratch pad is not initialized.
+Scratch pad is not initialized.
+Scratch pad is not initialized.
+[0;34m[NTC bpm] bpm_sw_pool_init: num_objs_per_slab:0 init_num_buf:11220
+[0m
+[0;34m[NTC bpm] bpm_init_buf_pool: buf_top_idx:11220[0m
+[0;34m[NTC bpm] bpm_init_skb_pool: skbs pool inited total 11220[0m
+mpm_free_ring_alloc: Host 0xc27e9000 (0xc27e9000), Phys 0x027e9000 (0x00000000), Size 41848832 (0) bytes
+mpm_free_ring_alloc: free_ring 0
+Enforcer is ready
+Broadcom BP3 Driver - Platform: TELCO, BPA: v0, BLOB: v1, License Folder: "/data/licenses", Chip Name: 6766, OUI: CC4EEC, Release Tag: 6.2L.0test2
+[0;33;41m[ERROR bp3] __license_verify_and_load,350: OUI mismatch - DEV:0xCC4EEC00[0m
+[0;33;41m[ERROR bp3] __license_verify_and_load,350: OUI mismatch - DEV:0xCC4EEC00[0m
+BP3 status - provisioned
+Broadcom Ingress QoS Module  Char Driver v1.0 Registered<246>[0m
+
+Broadcom Ingress QoS v1.0 initialized
+[0;36;44mBroadcom Packet Flow Cache [0m
+FCACHE_CONFIG_MAX_UCAST_FLOW_ENTRIES<16384>
+FCACHE_CONFIG_MAX_MCAST_GROUPS<128>
+FCACHE_CONFIG_MAX_MCAST_CLIENTS_PER_GROUP<63>
+FCACHE_CONFIG_MAX_MCAST_CLIENTS<1024>
+FCACHE_CONFIG_MAX_FDB_ENTRIES<1024>
+FCACHE_CONFIG_MAX_HOST_DEV_ENTRIES<64>
+FCACHE_CONFIG_MAX_HOST_MAC_ENTRIES<32>
+FCACHE_CONFIG_MAX_FLOW_ENTRIES<17536>
+npe_max_entries<17536>
+Bind blog_notify_evt_enqueue_fn[<bf26dbe8>]
+fc_evt task created successfully
+max_ent = 17536 intvl_msec = 10000 num_slices = 2000 num_ent = 9 period_msec = 5 
+NBUFF v1.0 Initialized
+fcache: max_groups<128> mcast_max_clients_per_group<63> mcast_max_clients<1024>
+fcache: mcast_max_ent<1152>
+fcache: ucast_max_ent<16384>
+fcache: max_ent<17536>
+group_type_mcast.group_bitmap_pool_p<c27e3d40>
+[0;36;44mTotal # of labels = 80[0m
+[0;36;44mInitialized fcache state[0m
+	Pkt HW acceleration is disabled/unavailable.
+[0;36;44mBroadcom Packet Flow Cache  Char Driver v4.0 Registered<302>[0m
+fc_timer_task created successfully
+	Pkt HW acceleration is disabled/unavailable.
+Created Proc FS /procfs/fcache
+[0;36;44mBroadcom Packet Flow Cache registered with netdev chain[0m
+[0;36;44mBroadcom Packet Flow Cache learning via BLOG enabled.[0m
+[0;35m[FHW]  pktDbgLvl[0xbf291bc4]=0[0m
+[0;34m[FHW]  fhw_construct: [0m
+[0;36;44mInitialized Fcache HW accelerator layer state[0m
+flwStatsThread created. numFlwsPerPoll 584 maxFlwIdx 17535
+[0;36;44mFcache Pathstats created[0m
+[0;36;44mConstructed Broadcom Packet Flow Cache v4.0[0m
+Broadcom Command List Driver v1.0
+[0;36;44mBroadcom Archer GPL Driver[0m
+bcm-archer-gpl 80210000.sysport-blk: sysport-base (0xf11c0000, 0x80210000): [mem 0x80210000-0x8021ffff flags 0x200]
+SYSPORT[0] IRQ[0]: 33
+SYSPORT[0] IRQ[1]: 34
+SYSPORT[0] IRQ[2]: 35
+SYSPORT[0] IRQ[3]: 36
+SYSPORT[0] IRQ[4]: 37
+SYSPORT[0] IRQ[5]: 38
+SYSPORT[0] IRQ[6]: 39
+SYSPORT[0] IRQ[7]: 40
+SYSPORT[0] IRQ[8]: 41
+SYSPORT[0] IRQ[9]: 42
+SYSPORT[0] IRQ[10]: 43
+SYSPORT[0] IRQ[11]: 44
+Found 1 System Port(s)
+CROSSBOW: cnp_p 0xf11e0000, natc_p 0xf1900000, cm7_p 0xf1a00000
+[0;36;44mBroadcom Archer Proprietary Driver[0m
+CHIP ID 6766A0
+mpm_free_ring_alloc: Host 0xc2c5b000 (0xc2c5b000), Phys 0x02c5b000 (0x00000000), Size 46510080 (0) bytes
+mpm_free_ring_alloc: free_ring 1
+RCQ MPM Free Ring initialized (1)
+Allocated HW_TIMER number 0
+Broadcom Timer Initialized
+mpm_free_ring_alloc: Host 0xc2c41000 (0xc2c41000), Phys 0x02c41000 (0x00000000), Size 46403584 (0) bytes
+mpm_free_ring_alloc: free_ring 2
+Socket: 0, fwq budget 64
+Socket: 0, stq budget 128
+Socket: 0, rxq max_pkts 8192 budget 128
+Crossbow STQ[0] Ready
+Crossbow FWQ[0] Ready
+Socket: 1, fwq budget 64
+Socket: 1, stq budget 128
+Socket: 1, rxq max_pkts 8192 budget 128
+Crossbow STQ[1] Ready
+Crossbow FWQ[1] Ready
+Socket: 2, fwq budget 64
+Socket: 2, stq budget 128
+Socket: 2, rxq max_pkts 8192 budget 128
+Crossbow STQ[2] Ready
+Crossbow FWQ[2] Ready
+Socket: 3, fwq budget 64
+Socket: 3, stq budget 128
+Socket: 3, rxq max_pkts 8192 budget 128
+Crossbow STQ[3] Ready
+Crossbow FWQ[3] Ready
+Socket: 4, fwq budget 64
+Socket: 4, stq budget 128
+Socket: 4, rxq max_pkts 8192 budget 128
+Crossbow STQ[4] Ready
+Socket SHINFO Reset: size 36, offset 2432
+Crossbow FWQ[4] Ready
+Crossbow Socket Initialized (MPM Free Ring 2)
+Crossbow WLAN Interface Initialized
+Crossbow GDX Interface Initialized
+NATC Flow Memory: virt_p ee400000, phys_addr 0x2e400000, size 0
+NATC Table Size = 65543 Flows (Key 16B, Context 176B, Wastage 1047232B)
+Crossbow Exception Reboot: bf2fefec
+Crossbow SYSPORT Driver Constructed
+mpm_alloc_ring_alloc: Host 0xc2c61000 (0xc2c61000), Phys 0x02c61000 (0x00000000), Size 46534656 (0) bytes
+mpm_alloc_ring_alloc: alloc_ring 0, buf_mode FKB (0), buf_type 0
+Archer DHD Initialized
+Archer Mode set to L2+L3
+Archer Mode set to L2+L3
+Initialized Archer Host Layer
+Flow Info Table (52, 65543): f1b01000px, 3408236B
+[0;34m[NTC bitpool] idx_pool_init: 533:FHW[0]:Create Index Pool_Size = 65543[0m
+Retrieve num_fhw_path=64
+[0;36;44mPathstats allocated 2048 bytes[0m
+Flow Cache: Lookup Key Optional Fields bitmasks: 
+ mcast vtag_mask: <0000ffff> <00000fff>
+ mcast vtag_mask: <0000ffff> <00000fff>
+[0;36;44mBroadcom Packet Flow Cache HW acceleration enabled.[0m
+Enabled Archer binding to Flow Cache
+[0;36;44mBroadcom Archer Network Processor Char Driver v0.1 Registered <339>[0m
+Crossbow TCP Pure ACK Enabled
+bcm_tcp_module_load_notify: ***No valid HTOA license. Do not enable GDX for local tcp acceleration***
+gdx_priv_init: GDX: Private Init Successful
+Socket: 4, fwq budget 256
+XBow GDX binding done
+gdx_hwacc_dev_group_init: [1m[34m GDX: group_idx 0 configured GDX<-->Crossbow
+gdx_bind: GDX: Successfully bound the hooks
+gdx_hw_init: [1m[34m GDX: gdx_print_lvl<0xbf310280>=0[0m
+gdx_hw_init: [1m[34m GDX: Generic Device Accelerator (GDX) Driver is initialized![0m
+bcm_tcp_module_load_notify: ***No valid HTOA license. Do not enable GDX for local tcp acceleration***
+bcmenet DT
+Registered mac device: SF2MAC:0x0
+Registered mac device: SF2MAC:0x5
+Registered mac device: SF2MAC:0x8
+LAG/Trunking enabled <0x08>
+Assigning idx[15] for bcmsw
+Assigning idx[16] for eth1
+BCMENET: Enabling Software GSO for eth1
+Adjusted SGPHY: sphy_ctrl=0x00018800 ext_pwr_down=0x0
+Assigning idx[17] for eth0
+BCMENET: Enabling Software GSO for eth0
+
+[0;30;102m=== Start of 10G Active Ethernet Initialization for core 0 port 0 ===[0m
+MDIO Clock Divider Value: 12 Probe mode: Yes
+[0;30;102mProbing Copper PHYs located at bus:[0m
+   PHY defined in DT at address  6 PHY Type: 15 is not detected!!
+    Detected Copper PHY at address  8 with PhyId:0xf7a6.0x1d10; PkgId:0x0000.0x0000; EGPHY
+Set Serdes at address 6 shared reference clock 80MHz.
+Set 80 MHZ clock sharing on XGPHY at address 20
+    Detected Copper PHY at address 20 with PhyId:0x3590.0x5081; PkgId:0x0000.0x0000; 84891L   B0:
+
+MDIO Clock Divider Value: 12 Probe mode: No
+
+Detecting PHYs...
+84891L   B0 3590:5081 --> 0x14 
+
+Loading firmware into detected PHYs: map=0x100000 count=1
+    PHY Addresses at  20, PHY Names:  84891L   B0, Firmware Name: blackfin_b0
+Halt the PHYs processors operation
+Registers: devid:01, ctrl:a817, ram_addr:00000000
+           addr_low:a819, addr_high:a81a, data_low:a81b, data_high:a81c
+Upload the firmware into the on-chip memory: file=/etc/fw/blackfin_b0_firmware.bin size=294708
+MDIO Clock Divider Value: 9 Probe mode: No
+10%[1A
+20%[1A
+30%[1A
+40%[1A
+50%[1A
+60%[1A
+70%[1A
+80%[1A
+90%[1A
+100%[1A
+
+MDIO Clock Divider Value: 12 Probe mode: No
+Set 80 MHZ clock sharing on XGPHY at address 20
+Reset the processors to start execution of the code in the on-chip memory
+Verify that the processors are running: OK
+Verify that the firmware has been loaded with good CRC: OK
+Firmware loading completed successfully, version: (2.3.5)
+
+
+Scratch pad is not initialized.
+--- Step 0 powerup/reset sequence of core #0 at address 6
+Toggle Serdes Core #0 PMD and uC reset.
+INFO MerlinSupport::merlin_core_init(): END. Core #0 with PRTAD = 6, ln_offset_stap = 0
+MerlinSupport::merlin16_serdes_init(): Step 6. Micro code load and verify 
+MerlinSupport::merlin_load_firmware(): ret = 0 
+MerlinSupport::merline_speed_set_core(): Step 7 Config Speed to 2
+No option found for: "-d ML_C_VCO_10P3125", added default value 0 in index 4
+--- Step 8 PLL/PMD setup configuration for speed 0, mode 2.
+MerlinSupport::merline_speed_set_core(): PMD Setup 80MHz, 10.3125GHz VCO programming 
+MerlinSupport::merlin_wait_uc_active():    wait 50us comclks for micro to be up...
+MerlinSupport::merlin_wait_uc_active():  Checking uc_active passed ...
+MerlinSupport::merlin_wait_uc_active():  micro is ready for command ...
+MerlinSupport::merline_speed_set_core(): Step 9. Configure Core level regsiter 
+MerlinSupport::merline_speed_set_core(): Step 10. Set core_congif_from_pcs 
+MerlinSupport::merline_speed_set_core(): RAM variable vco_rate is 19 
+MerlinSupport::merlin_cfg_core_ram_var():  program core_config_word 0x26 to ram address 0x20000200 ...
+MerlinSupport::merline_speed_set_core(): Step 12. Reset Datapath (core) 
+MerlinSupport::merlin_reset_datapath_core(): Datapath Reset (core) in progress 
+MerlinSupport::merline_speed_set_core(): Step 13. Lane Configuration 
+MerlinSupport::merline_speed_set_core(): Step 13.a. Configure lane registers 
+MerlinSupport::merline_speed_set_core(): RAM variable an_enabled is 0 
+MerlinSupport::merlin_cfg_lane_ram_var():  program lane_config_word 0x4 to ram address 0x20000300 ...
+MerlinSupport::merlin_lane_config_speed(#2):  
+MerlinSupport::CONFIGURING FOR FORCE 1G
+MerlinSupport::merlin_lane_config_speed(): Core #0 Lane #0 PMD Lock Speed Up programming 
+INFO MerlinSupport::merlin_lane_config_speed(): END Merlin core #0 lane #0 Initialization procedure
+MerlinSupport::merlin_chk_pll_lock(): Checking Core #0 PLL Lock Status 
+MerlinSupport::merlin_chk_pll_lock(): PLL Locked
+INFO MerlinSupport::merlin16_serdes_init(): END Merlin Initialization procedure
+MerlinSupport::merline_speed_set_core(): Step 7 Config Speed to 264
+--- Step 8 PLL/PMD setup configuration for speed 0, mode 16.
+MerlinSupport::merline_speed_set_core(): PMD Setup 80MHz, 10.3125GHz VCO programming 
+MerlinSupport::merlin_wait_uc_active():    wait 50us comclks for micro to be up...
+MerlinSupport::merlin_wait_uc_active():  Checking uc_active passed ...
+MerlinSupport::merlin_wait_uc_active():  micro is ready for command ...
+MerlinSupport::merline_speed_set_core(): Step 9. Configure Core level regsiter 
+MerlinSupport::merline_speed_set_core(): Step 10. Set core_congif_from_pcs 
+MerlinSupport::merline_speed_set_core(): RAM variable vco_rate is 19 
+MerlinSupport::merlin_cfg_core_ram_var():  program core_config_word 0x26 to ram address 0x20000200 ...
+MerlinSupport::merline_speed_set_core(): Step 12. Reset Datapath (core) 
+MerlinSupport::merlin_reset_datapath_core(): Datapath Reset (core) in progress 
+MerlinSupport::merline_speed_set_core(): Step 13. Lane Configuration 
+MerlinSupport::merline_speed_set_core(): Step 13.a. Configure lane registers 
+MerlinSupport::merline_speed_set_core(): RAM variable an_enabled is 1 
+MerlinSupport::merlin_cfg_lane_ram_var():  program lane_config_word 0x3 to ram address 0x20000300 ...
+MerlinSupport::merlin_lane_config_speed(#108):  
+MerlinSupport::CONFIGURING FOR USXGMII AN SLAVE
+MerlinSupport::merlin_lane_config_speed(): Core #0 Lane #0 PMD Lock Speed Up programming 
+INFO MerlinSupport::merlin_lane_config_speed(): END Merlin core #0 lane #0 Initialization procedure
+MerlinSupport::merlin_chk_pll_lock(): Checking Core #0 PLL Lock Status 
+MerlinSupport::merlin_chk_pll_lock(): PLL Locked
+[0;30;102m=== End of 10G Active Ethernet Initialization for core 0 port 0 ===[0m
+Ethernet Recycle Thread Initialized
+dgasp: kerSysRegisterDyingGaspHandler: bcmsw registered 
+enet_kthread_init:L637 ENET system contructed and configured enet-kthrd thread
+enet_kthread_handler:L595 Instantiating ENET thread
+    LAN MAC Address : CC:4E:EC:D2:39:E0
+eth1      : Dn Rx:   0 Tx:   0 10Mb:Dn   IntSw:P0  Lgcl: 0 LAN @:08:OnCp      NoApd            PwDn Max:1G      EGPHY Spd:Auto:1G            Down EEE:Off 0000/0000
+eth0      : Dn Rx:   0 Tx:   0 10Mb:Dn   IntSw:P5  Lgcl: 5 LAN US1K2XR5KR10R
+            @:06:OnCp      ApdOn            80MRC PwDn Max:10G            10GAE#L0.0 Spd:Auto:10G  XFI:Au:AnAu     AUS1KXR2KXR5KRX10R:       USXGMII_A         Down 0000/0000
+            @:20:Extn Cscd ApdOn            80MRC PwDn Max:10G   84891L   B0:(2.3.5) Spd:Auto:10G  XFI:Au:AnAu        US1K2IXR5KIR10R:       USXGMII_A         Down EEE:Off 0000/0000
+: Up Rx:   0 Tx:   0 10G :10G  IntSw:P8  Lgcl: 8     
+bcm_mcast_init successful
+logical_port 0: intf_index 0, switch_index 0, phys_port 0 -> port_index 0, nbr_of_queues 8
+logical_port 1: intf_index 0, switch_index 0, phys_port 5 -> port_index 1, nbr_of_queues 4
+SYSPORT[0]: port[0] -> nbr_of_brcm_tags 1
+SYSPORT[0]: port[1] -> nbr_of_brcm_tags 1
+SYSPORT[0] = SWITCH_INTERNAL
+Ports 2, TDMA Rings 12
+Broadcom PCIe Host Controller Driver (impl1)
+  bcm-pcie: Core [0] latent fastpath master
+bcm-pcie 90000000.vpcie: host bridge /ubus-bus/vpcie@0 ranges:
+bcm-pcie 90000000.vpcie:      MEM 0x0090000000..0x0097ffffff -> 0x0090000000
+bcm-pcie 90000000.vpcie:      MEM 0x00800e0000..0x00800e00ff -> 0x00800e0000
+  bcm-pcie: [4] DT node available: vpcie@0
+  bcm-pcie: vcore [0] found vdev [0] 
+  bcm-pcie: Core [4] has 0 regulators
+  bcm-pcie: found Port [4] GEN0 Core Rev [1.00] with 0 Lanes
+  bcm-pcie: Core [4] Synchronized the Satellite Timer with 0xa1197d43
+  bcm-pcie: [4] vcore [0] initialized with [1] device
+bcm-pcie 90000000.vpcie: PCI host bridge to bus 0000:01
+pci_bus 0000:01: root bus resource [bus 01]
+pci_bus 0000:01: root bus resource [mem 0x90000000-0x97ffffff]
+pci_bus 0000:01: root bus resource [mem 0x800e0000-0x800e00ff]
+pci 0000:01:00.0: [14e4:6039] type 00 class 0x028000
+pci 0000:01:00.0: reg 0x10: [mem 0x90000000-0x97ffffff 64bit]
+pci 0000:01:00.0: reg 0x18: [mem 0x800e0000-0x800e00ff 64bit]
+pci 0000:01:00.0: supports D1 D2
+TAM_TM_TXQ_DDR_DESC_RING_WR_BURST_CTRL = Default
+PCI: bus1: Fast back to back transfers disabled
+SGDMA_GP[0] Offset = 12244
+pci 0000:01:00.0: BAR 0: assigned [mem 0x90000000-0x97ffffff 64bit]
+SGDMA_GP[1] Offset = 12292
+pci 0000:01:00.0: BAR 2: assigned [mem 0x800e0000-0x800e00ff 64bit]
+SGDMA_GP[2] Offset = 12340
+bcm-pcie 98000000.vpcie: host bridge /ubus-bus/vpcie@1 ranges:
+SGDMA_GP[3] Offset = 12468
+bcm-pcie 98000000.vpcie:      MEM 0x0098000000..0x009fffffff -> 0x0098000000
+SGDMA_GP[4] Offset = 12516
+bcm-pcie 98000000.vpcie:      MEM 0x00800f0000..0x00800f00ff -> 0x00800f0000
+SGDMA_GP[5] Offset = 12564
+  bcm-pcie: [5] DT node available: vpcie@1
+SGDMA_GP[6] Offset = 12612
+  bcm-pcie: vcore [1] found vdev [0] 
+NATC Flow Table: 0xee400000 (Key 16B, Total 1048688B)
+  bcm-pcie: Core [5] has 0 regulators
+NATC Context Table: 0xee500070 (Context 176B, Total 11535568B)
+  bcm-pcie: found Port [5] GEN0 Core Rev [1.00] with 0 Lanes
+Loading CM7 Standard Image
+  bcm-pcie: Core [5] Synchronized the Satellite Timer with 0xa1c2a8d1
+CM7[0] Initialized (DTCM 18752B, ITCM 23884B)
+  bcm-pcie: [5] vcore [1] initialized with [1] device
+CM7[1] Initialized (DTCM 25368B, ITCM 28240B)
+bcm-pcie 98000000.vpcie: PCI host bridge to bus 0001:01
+Crossbow IQ status changed from 0 to 1
+pci_bus 0001:01: root bus resource [bus 01]
+Crossbow SYSPORT Driver Initialized
+pci_bus 0001:01: root bus resource [mem 0x98000000-0x9fffffff]
+Archer INTR[0]: irq 33, cpu_id 0, crossbow_rxq (0xbf2c7218)
+pci_bus 0001:01: root bus resource [mem 0x800f0000-0x800f00ff]
+Archer INTR[1]: irq 39, cpu_id 0, crossbow_rxq (0xbf2c7218)
+pci 0001:01:01.0: [14e4:6038] type 00 class 0x028000
+Archer INTR[2]: irq 34, cpu_id 0, crossbow_txq (0xbf2c7228)
+pci 0001:01:01.0: reg 0x10: [mem 0x98000000-0x9fffffff 64bit]
+Archer INTR[3]: irq 40, cpu_id 3, crossbow_socket (0xbf2c7264)
+pci 0001:01:01.0: reg 0x18: [mem 0x800f0000-0x800f00ff 64bit]
+Archer INTR[4]: irq 35, cpu_id 3, crossbow_socket (0xbf2c7264)
+pci 0001:01:01.0: supports D1 D2
+Archer INTR[5]: irq 41, cpu_id 3, crossbow_socket (0xbf2c7264)
+PCI: bus1: Fast back to back transfers disabled
+Archer INTR[6]: irq 36, cpu_id 3, crossbow_socket (0xbf2c7264)
+pci 0001:01:01.0: BAR 0: assigned [mem 0x98000000-0x9fffffff 64bit]
+Archer INTR[7]: irq 42, cpu_id 3, crossbow_socket (0xbf2c7264)
+pci 0001:01:01.0: BAR 2: assigned [mem 0x800f0000-0x800f00ff 64bit]
+CM7[0] Running (Task mode, 18752B)
+bcm-pcie 80080000.pcie: host bridge /ubus-bus/pcie@0 ranges:
+CM7[1] Running (Task mode, 25368B)
+bcm-pcie 80080000.pcie:      MEM 0x00c0000000..0x00cfffffff -> 0x00c0000000
+Archer INTR[8]: irq 43, cpu_id 3, crossbow_mailbox (0xbf2c7c8c)
+  bcm-pcie: Core [0] DT node available: pcie@0
+Archer INTR[9]: irq 38, cpu_id 0, crossbow_timer (0xbf2c72e4)
+  bcm-pcie: Core [0] has 1 regulators
+Archer INTR[10]: irq 44, cpu_id 0, crossbow_timer (0xbf2c72e4)
+  bcm-pcie: found Port [0] GEN3 Core Rev [4.07] with 2 Lanes
+  bcm-pcie: Port [0] using 16FFC-BlackShark, Xtal : 80MHz Serdes
+GetRCalSetting_1UM_VERT: SW RCAL_1UM_VERT is not needed on this platform
+  bcm-pcie: Core [0] Using epuperstb
+  bcm-pcie: Core [0] enable vreg-pcie0 regulator.
+  bcm-pcie: Core [0] Link UP - [2] lanes, [GEN2] speed
+  bcm-pcie: Core [0] BAR1 Addr: 0x00_00000000 Size: 1 GB
+  bcm-pcie: Core [0] Synchronized the Satellite Timer with 0xa3eff32f
+  bcm-pcie: Core [0] Configuring Priority Queue Mapping
+  bcm-pcie: Core [0] Configuring Priority Queue Arbitration
+  bcm-pcie: Core [0] Configuring Incoming Fastpath
+  bcm-pcie: Core [0] fastpath master
+  bcm-pcie: Core [0] Enabled PCIE/UBUS Error Interrupts
+  bcm-pcie: Core [0] UBUS Intr [UBUS_LINKUP]
+bcm-pcie 80080000.pcie: PCI host bridge to bus 0002:00
+pci_bus 0002:00: root bus resource [bus 00-01]
+pci_bus 0002:00: root bus resource [mem 0xc0000000-0xcfffffff]
+pci 0002:00:00.0: [14e4:0676] type 01 class 0x060400
+pci 0002:00:00.0: PME# supported from D0 D3hot
+pci 0002:00:00.0: PTM enabled (root), 4ns granularity
+PCI: bus0: Fast back to back transfers disabled
+pci 0002:00:00.0: bridge configuration invalid ([bus 00-00]), reconfiguring
+pci 0002:01:00.0: [14e4:6716] type 00 class 0x028000
+pci 0002:01:00.0: reg 0x10: [mem 0x00000000-0x0000ffff 64bit]
+pci 0002:01:00.0: reg 0x18: [mem 0x00000000-0x007fffff 64bit]
+pci 0002:01:00.0: reg 0x20: [mem 0x00000000-0x00ffffff 64bit pref]
+pci 0002:01:00.0: supports D1 D2
+PCI: bus1: Fast back to back transfers disabled
+pci_bus 0002:01: busn_res: [bus 01] end is updated to 01
+pci 0002:00:00.0: BAR 9: assigned [mem 0xc0000000-0xc0ffffff 64bit pref]
+pci 0002:00:00.0: BAR 8: assigned [mem 0xc1000000-0xc1bfffff]
+pci 0002:01:00.0: BAR 4: assigned [mem 0xc0000000-0xc0ffffff 64bit pref]
+pci 0002:01:00.0: BAR 2: assigned [mem 0xc1000000-0xc17fffff 64bit]
+pci 0002:01:00.0: BAR 0: assigned [mem 0xc1800000-0xc180ffff 64bit]
+pci 0002:00:00.0: PCI bridge to [bus 01]
+pci 0002:00:00.0:   bridge window [mem 0xc1000000-0xc1bfffff]
+pci 0002:00:00.0:   bridge window [mem 0xc0000000-0xc0ffffff 64bit pref]
+pci 0002:00:00.0: Max Payload Size set to  512/ 512 (was  128), Max Read Rq  512
+pci 0002:01:00.0: Max Payload Size set to  512/ 512 (was  128), Max Read Rq  512
+pcieport 0002:00:00.0: enabling device (0140 -> 0142)
+HS UART: Driver $Revision: 1.00 $
+ttyH0 at MMIO 0xff810400 (irq = 76, base_baud = 3125000) is a HS_UART
+bcm-bca-usb-ctrl 800cf200.usb_ctrl: ---- Powering up USB blocks
+bcm-bca-usb-xhci 800c0000.usb0_xhci: registered successfully
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-platform: EHCI generic platform driver
+ehci-pci: EHCI PCI platform driver
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+ohci-platform: OHCI generic platform driver
+ohci-pci: OHCI PCI platform driver
+xhci-hcd xhci-hcd.0: xHCI Host Controller
+xhci-hcd xhci-hcd.0: new USB bus registered, assigned bus number 1
+xhci-hcd xhci-hcd.0: hcc params 0x0228ffed hci version 0x110 quirks 0x0000000000010810
+xhci-hcd xhci-hcd.0: irq 32, io mem 0x800c0000
+xhci-hcd xhci-hcd.0: xHCI Host Controller
+xhci-hcd xhci-hcd.0: new USB bus registered, assigned bus number 2
+xhci-hcd xhci-hcd.0: Host supports USB 3.1 Enhanced SuperSpeed
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 2 ports detected
+hub 2-0:1.0: USB hub found
+hub 2-0:1.0: 1 port detected
+usbcore: registered new interface driver usblp
+usbcore: registered new interface driver usb-storage
+usbcore: registered new interface driver uas
+pdev=c166f400 name=8106037c.brcm-therm num_resources=1
+i=0 name=bac_cpu_therm_temp start=8106037c end=8106037f flags=0x200 type=512
+ioremapped reg bac_cpu_therm_temp <0x8106037c 0x4> to f121137c
+broadcomThermalDrv 8106037c.brcm-therm: init chipId 0x6766 (CPU cnt present 4 online 4 possible 4 active 4)
+Loading wlshared Module...
+cfg80211: Loading compiled-in X.509 certificates for regulatory database
+cfg80211: Loaded X.509 cert 'wens: 61c038651aabdcf94bd0ac7ff06c7248db18c600'
+cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+cfg80211: failed to load regulatory.db
+Loading HND Module
+WL MLO AP IDS assignment -1 -1 -1 -1
+igs_module_init:882:	 IGS 29 create network socket successful
+dhd_module_init in
+DHD_FKB_POOL size is:1280 and entry size:2688
+DHD_PKTTAG POOL size is:2592 and entry size:44
+[0;32mdhd_pktfwd_sys_init:  [1m[34mdhd_PKTFWD[1.0.0][0m Success[0m
+dhd_queue_budget = 256
+dhd_sta_threshold = 2048
+dhd_if_threshold = 65536
+dhdpcie_pci_probe: chipmatch failed!! Unsupported vendor 14e4 device 6039
+dhdpcie_pci_probe: chipmatch failed!! Unsupported vendor 14e4 device 6038
+PCI_PROBE:  bus 1, slot 0,vendor 14E4, device 6716(good PCI location)
+dhdpcie_prepare_pcie_ep: Resettting backplane for device 0x6716
+Polling for SB Reset state (PCI_SPROM_CONTROL)
+SB reset bit is de-asserted by HW. Wait for 2ms for Backplane RESET to be completed
+pcieh 0002:01:00.0: enabling device (0140 -> 0142)
+DHD: dongle ram size is set to 4718592(orig 4718592) at 0x0
+osl_pcie_mrrs_config: MPS 512 MRR 512 devctl 0x102d50
+osl_pcie_mrrs_config: override PCIE device MRRS from 512 to 1024
+PCIe: dev 0002:01:00.0: Link Speed: [GEN2]
+PCIe Link Speed after training: [GEN3]
+0002:01:00.0: domain 2 dev_to_ifid_map ffffffff override 0
+dhd_get_next_instance: enter: dhd_found 0 inst 0
+dhd_get_next_instance: exit: inst 0
+0002:01:00.0: unit 0
+WET:wet_maxip_per_sta = 2
+dhd:0: fw path:/etc/wlan/dhd nv path:(null)
+0002:01:00.0: unit 0 iface_name wl if_name wl0
+[dhd_allocate_if] Allocated wl0 dev 1de4d83b 
+wl0: dhd_cpudbg_init: mac_cpudbg_config = 0
+crossbow_wlan_fw_index_alloc(0) = 0
+dol0: CrossBow supported types TxP 0x5, RxP 0x3 TxC 0x23 RxC 0x3
+dhd_offload_attach: Tx Offload - Enabled, Ring Size = 1024
+dhd_offload_attach: Rx Offload - Enabled, Ring Size = 1024
+wakeup_information: radio_idx 0, rx 0x80200ca8 = 1, tx 0x80200cac = 1
+TX wakeup info: reg = <0x80200cac>, val = <0x00000001>
+RX wakeup info: reg = <0x80200ca8>, val = <0x00000001>
+wl0: dhd_prot_attach: allocated cpudbg dma buf va f1ccbafd
+CFG80211-ERROR) wl_setup_wiphy : Registering Vendor80211
+CFG80211-ERROR) wl_cfg80211_apply_eventbuffer : Get event_msgs error (-19)
+CFG80211-ERROR) wl_cfg80211_set_cac_state_change_eventbits : failed to set WLC_E_CAC_STATE_CHANGE bit
+dhd0_awl attach successful tx: 1, rx: 0
+dhd_attach(): thread:dhd_watchdog_thread:4a3 started
+dhd_deferred_work_init: work queue initialized 
+wl0: pktfwd_tbl 0xbf5a38a4
+crossbow_wlan_fw_index_alloc(0) = 0
+Socket: 0, fwq budget 280
+LLCSNAP insertion supported for radio index 0
+[0;34mCrossbow WLAN Bind: wl0, radio_index 0, mode FKB[0m
+[0;32mdhd_wfd_bind: wl0 wfd_idx 0 success[0m
+dhd0: dhdpcie_bhm_mem_alloc: PCIe IPC BHM ALLOC SUCCESS: size 26MB  DMA Buf va f2922000 pa hi 0x00000000 lo 0x3d600000 len 27262976
+dhd:0: fw path:/etc/wlan/dhd nv path:(null)
+dhd_bus_start_try download fw /etc/wlan/dhd, nv 
+osl_os_get_image_stat: no file info for /etc/wlan/dhd/6726b0//rtecdc.bin (-2)
+DHD  concate_extfdimg_name: Final FW path is /etc/wlan/dhd/6726b0/release/rtecdc.bin 
+dhd_bus_download_firmware: firmware path=/etc/wlan/dhd/6726b0/release/rtecdc.bin, nvram path=
+dhdpcie_ramsize_adj: Enter
+dhdpcie_ramsize_adj: Adjust dongle RAMSIZE to 0x480000
+dhdpcie_download_code_file: process hybrid firmware file
+dhdpcie_hybridfw_get_next_block Found section 0 with length 2420934
+dhdpcie_hybridfw_get_next_block Found section 1 with length 2248704
+dhdpcie_download_code_file: hybridfw DMA Buf va c6c00000 pa hi 0x00000000 lo 0x06c00000 len 2248704
+dhdpcie_bus_write_vars: Download, Upload and compare of NVRAM succeeded.
+dhdpcie_bus_write_sysmem_tlvs: HYBRIDFW Host page location info: 0x0000000006c00000 binary_size:2248704
+dhdpcie_bus_write_sysmem_tlvs: Boot Host Memory location: 0x000000003d600000 bhm_size:27262976
+
+PCIe IPC Host Dongle Training Commences ...
+
+PCIe IPC UPLOAD COMMENCE
+PCIe IPC LOCATED: read_u32 daddr32 0x000de1c0 took 157023 usec. ram[0x00000000,0x0047fffc]
+PCIe IPC HEADER: daddr32 0x000de1c0 size 128 revision: host 0x8c dngl 0x8c
+	 FWID 0xdbcfa646, flags 0x10a1008c, dcap1 0x2f8f0000 dcap2 0x000035bf
+	 trap 0x00000000 assrt 0x00000000,0x00000000,0 cons 0x0024f008
+	 mbox H2D 0x00268044 D2H 0x00268048 rings 0x00264d54
+PCIe IPC HEADER HME: version 18 users 25 size 816
+	 ID HMEUSR PAGES ALIGN   BOUNDARY  FLAGS  BHM
+	  0 SCRMEM     1   256 0x00000000 0x0074  YES
+	  1 PKTPGR   648   256 0x00000000 0x0076  YES
+	  2 MACIFS  2304   256 0x00000000 0x0076  YES
+	  3 LCLPKT   256   256 0x00000000 0x0074  YES
+	  4 PSQPKT     0   256 0x01ffffff 0x007c  YES
+	  5 CSIMON    33   256 0x00000000 0x0074  YES
+	  6 HMOSWP   549  4096 0x00000000 0x0037  NO
+	  7 MBXPGR    72   256 0x00000000 0x0074  YES
+	  8 AIR_IQ     0   256 0x01ffffff 0x007c  YES
+	  9 SBFTBL     2   256 0x00000000 0x0074  YES
+	 10 HMOSCB   606   256 0x0fffffff 0x007c  YES
+	 11 LOWMAC     1   256 0x00000000 0x0074  YES
+	 12 CLSBUF   128   256 0x00000000 0x0074  YES
+	 13 BMPSVC   228   256 0x00000000 0x0074  YES
+	 14 HMOPPR    88   256 0x0fffffff 0x007c  YES
+	 15 MACDBG    96   256 0x00000000 0x0074  YES
+	 16 RU_CFG     0   256 0x01ffffff 0x007c  YES
+	 17 SCMEAS    32   256 0x00000000 0x0074  YES
+	 18 HMOEVT    64   256 0x00000000 0x0074  YES
+	 19 MLOIPC     0   256 0x01ffffff 0x007c  YES
+	 20 RNGCSI    64   256 0x00000000 0x0074  YES
+	 21 RFRESH     2   256 0x00000000 0x0074  YES
+	 22 RATEMM     0   256 0x01ffffff 0x007c  YES
+	 23 MAPIFS     0   256 0x01ffffff 0x007c  YES
+	 24 MUSTAT    26   256 0x0fffffff 0x007c  YES
+PCIe IPC RINGS: size 128 Ring Mem daddr32 0x00264dd4
+	 H2D Indices Array daddr32: WR 0x00266f74 RD 0x002677c0
+	 D2H Indices Array daddr32: WR 0x0026800c RD 0x00268028
+	 Total: H2D rings 531 D2H rings 7 flowrings 528 interfaces 16
+PCIe IPC UPLOAD COMPLETED
+
+PCIe IPC REVISION 140 Configuration and Features
+	 Config  : D2H Sync Mode: 0x00000000
+	 Config  : Max Rings H2D 531 Flowrings 528 D2H 7
+	 Config  : Max Dynamic Rings H2D 1 D2H 1
+	 Config  : Ring Index Size 4 bytes
+	 Feature : Host Backup Queue Depth
+	 Feature : Host iDMA16
+	 Config  : Flowring per TID
+	 Feature : Dongle DMA Indices H2D 1 D2H 1
+	 Protocol: [RSVD]H2D WR Indices buf set label 0xdeadbeef 
+	 Protocol: [RSVD]H2D WR Indices buf: DMA Buf va c5350000 pa hi 0x00000000 lo 0x05350000 len    4096 = 4096
+	 Protocol: H2D WR Indices Array: DMA Buf va c5354000 pa hi 0x00000000 lo 0x05354000 len    2176 = 4 *  531
+	 Protocol: D2H RD Indices Array: DMA Buf va c2c4ccc0 pa hi 0x00000000 lo 0x02c4ccc0 len      64 = 4 *    7
+	 Protocol: D2H WR Indices Array: DMA Buf va c2c4c800 pa hi 0x00000000 lo 0x02c4c800 len      64 = 4 *    7
+	 Protocol: H2D RD Indices Array: DMA Buf va c5352000 pa hi 0x00000000 lo 0x05352000 len    2176 = 4 *  531
+	 Feature : SFH Insertion 1
+	 Feature : CSI Monitor
+	 Feature : Fast Delete Ring
+dol0: BA256 updated Profile [4], max_items RxP/RxC [1024]/[4096]
+
+	 Config  : WI Formats TxP 1 RxP 1 TxC 1 RxC 1
+	 Feature : HWA iDMA RxPost
+	 Feature : HWA iDMA TxCpl
+	 Feature : HWA iDMA RxCpl
+	 Feature : HWA TxPost
+	 Protocol: H2D TxPost  : format 1 [type 2 size 32 max 2560 hdr_off 16]
+	 Protocol: H2D RxPost 1: format 1 [type 1 size  8 max 1024 shift 0]
+	 Protocol: D2H TxCpln 3: format 1 [type 1 size  8 max 1024]
+	 Protocol: H2D RxCpln 4: format 1 [type 1 size  8 max 4096 offset 0]
+	 Feature : TID from Donlge (rx_cmpl_v2)  supported
+	 Feature : RXCPLE RCH supported; max_rch_sdu_cnt 8 bcmpcie_rxcple_rch_size 72-bytes
+	 Feature : BQ_DRAIN Processing supported
+	 Config  : RxPost Data buffer length 1836
+	 Config  : Host PhysAddr hi32 0
+	 Protocol: HME Haddr64 Table users 25 DMA Buf va c1da1000 pa hi 0x00000000 lo 0x01da1000 len     200
+	 Protocol: HME user  0 DMA Buf va f2bf2000 pa hi 0x00000000 lo 0x3d8d0000 len    4096
+	 Protocol: HME user  1 DMA Buf va f2cd4000 pa hi 0x00000000 lo 0x3d9b2000 len 2654208
+	 Protocol: HME user  2 DMA Buf va f2f5c000 pa hi 0x00000000 lo 0x3dc3a000 len 9437184
+	 Protocol: HME user  3 DMA Buf va f385c000 pa hi 0x00000000 lo 0x3e53a000 len 1048576
+	 Protocol: HME user  5 DMA Buf va f39e4000 pa hi 0x00000000 lo 0x3e6c2000 len  135168
+	 Protocol: HME user  6 DMA Buf va c6c00000 pa hi 0x00000000 lo 0x06c00000 len 2248704
+	 Protocol: HME user  7 DMA Buf va f395c000 pa hi 0x00000000 lo 0x3e63a000 len  294912
+	 Protocol: HME user  9 DMA Buf va f3a05000 pa hi 0x00000000 lo 0x3e6e3000 len    8192
+	 Protocol: HME user 10 DMA Buf va f2922000 pa hi 0x00000000 lo 0x3d600000 len 2482176
+	 Protocol: HME user 11 DMA Buf va f2bf3000 pa hi 0x00000000 lo 0x3d8d1000 len    4096
+	 Protocol: HME user 12 DMA Buf va f2bf4000 pa hi 0x00000000 lo 0x3d8d2000 len  524288
+	 Protocol: HME user 13 DMA Buf va f3a49000 pa hi 0x00000000 lo 0x3e727000 len  933888
+	 Protocol: HME user 14 DMA Buf va f2b80000 pa hi 0x00000000 lo 0x3d85e000 len  360448
+	 Protocol: HME user 15 DMA Buf va f2c74000 pa hi 0x00000000 lo 0x3d952000 len  393216
+	 Protocol: HME user 17 DMA Buf va f3b2d000 pa hi 0x00000000 lo 0x3e80b000 len  131072
+	 Protocol: HME user 18 DMA Buf va f3a07000 pa hi 0x00000000 lo 0x3e6e5000 len  262144
+	 Protocol: HME user 20 DMA Buf va f39a4000 pa hi 0x00000000 lo 0x3e682000 len  262144
+	 Protocol: HME user 21 DMA Buf va f3a47000 pa hi 0x00000000 lo 0x3e725000 len    8192
+	 Protocol: HME user 24 DMA Buf va f2bd8000 pa hi 0x00000000 lo 0x3d8b6000 len  106496
+PCIe IPC Host Dongle Training Completed!
+
+dhd_bus_start_try: Initializing 531 h2drings
+dhd_offload_flowmgr_init: dol0: bootmem addr<ef100000> size<14680064>
+dol_frm_init_profile: profile = 4 0512/0512 1024/2048 0512/0512 0512/0000 0512/0000
+[0;33;40mdol0: TxOffl memory: Reserved<14 Mb> Needed<11 Mb>[0m
+
+dol0: using WME AC based flowid allocation
+	Protocol: Dyn rings: H2D starting ringid 536 (530) D2H ringid 537 (6)
+Attach flowrings pool for 529 rings
+iDMA enabled PCIEControl = 1083839a
+Config doorbell for d2h_rings <3>
+[0;33;40mCrossBow DHD PCIE: vendor<0x14e4> device<0x6716> bus<1> slot<0>[0m
+
+  bcm-pcie: Core [0] BAR2 Addr: 0x00_80000000 Size: 64 MB
+Initial configuration
+=================================
+	rx_post_flow_ring_base_addr : c535c000
+	tx_post_flow_ring_base_addr : ef0d8000
+	rx_complete_flow_ring_base_addr : c7390000
+	tx_complete_flow_ring_base_addr : c5358000
+
+	r2d_wr_arr_base_addr : c5354000, phys_addr : 05354000
+	d2r_rd_arr_base_addr : c2c4ccc4, phys_addr : 02c4ccc4
+	r2d_rd_arr_base_addr : c5352000, phys_addr : 05352000
+	d2r_wr_arr_base_addr : c2c4c804, phys_addr : 02c4c804
+	tx_post_mgmt_arr_base_addr : c2c1c000, phys_addr : 02c1c000
+
+	Doorbell Post Wakeup register : phy_addr: 0xc1802160, virt_addr: f20b2160
+	Doorbell Complete Wakeup register : phy_addr: 0xc1802164, virt_addr: f20b2164
+	Doorbell ISR : bf4d047c
+	Doorbell CTX : c277cc00
+	add_llcsnap_header : 1
+	flow_ring_format : 1
+	idma_active : 1
+	hbqd mode : 1
+	rx_post ring size : 1024
+	rx_complete ring size : 4096
+	tx_complete ring size : 1024
+	Rx Offload 1
+	Tx Offload 1
+Dongle Ring Sizes
+	rx_post ring     : 1024
+	rx_complete ring : 4096
+	tx_complete ring : 1024 (EWI: No)
+Max RCH Segments: 8
+CM7[0] DoX Radio 0 Initialized (0)
+bdmf_new_and_set: radio_idx 0, radio_handle 0xbf301a28
+Host Tx Complete Ring Create: radio_idx 0, ring_size 1024
+CM7[1] DoX Radio 0 Initialized (0)
+[0;33;40mCrossBow DHD Offload initialization Successful[0m
+
+Created netlink: radio unit idx 0, nl_id 23
+CSIMON: HOST CSIMON[1.1.1]
+wl0: dhd_prot_init: wrote cpudbg hostaddr hi 0, lo 6230000, config 0x7
+SBF: CB: [0xc564c800] Allocated
+SBF:  Threshold map [ SBF:  0:2048SBF:  6144:16384SBF:  ]
+SBF: dhd0: Using Static Threshold map HFC
+SBF: wd_cnt_expiry [100]
+SBF: grace_threshold [8]
+SBF: dhd0  SBFTBL[2.0.0] Initialized
+CUR_ETHERADDR : 6 
+cc 4e ec d2 39 e8 
+dhd_sync_with_dongle: GET_REVINFO device 0x602e, vendor 0x14e4, chipnum 0x6726, corerev 134
+dhd_prot_hme_get_buf_info dma_buf is null for HME user 4
+dhd_prot_hme_get_buf_info dma_buf is null for HME user 16
+dhd_prot_hme_get_buf_info dma_buf is null for HME user 19
+dhd_prot_hme_get_buf_info dma_buf is null for HME user 22
+dhd_prot_hme_get_buf_info dma_buf is null for HME user 23
+dhd_save_hme_buf_info HME buffer info saved
+wl0: dhd_prot_cpudbg_load_hmedata: dongle mlo_dbgstrs size 37024, daddr 0x9a304c
+wl0: dhd_prot_cpudbg_load_hmedata: dongle smac_dbgstrs size: 52744, daddr 0x97124c
+wl0: dhd_prot_cpudbg_load_hmedata: dongle psmr_labels size: 55808, daddr 0x9f1370
+Dongle Host Driver, version 25.438.32 (r849162) [4da17911c]
+Compiled in drivers/net/wireless/bcmdhd
+Assigning idx[18] for wl0
+dhd0_awl registered [wl0]
+Register interface [wl0]  MAC: cc:4e:ec:d2:39:e8
+
+wl0: dhd_prot_ioctl: status ret value is -23 iov=ptm_enable
+dhd_wl_ioctl_set_intiovar: set int iovar ptm_enable failed, ERR -23
+dhd_module_init: REGISTER SYSRQ D
+dhd_module_init out
+dhd_open, fw_map_file_path=/etc/wlan/dhd/6726b0/release/rtecdc.map, fw_bin_file_path=/etc/wlan/dhd/6726b0/release/rtecdc.bin
+dhd_hwa_event: Dongle(wl0) schedule hwa event
+dhd_hwa_event_handler: Dongle(wl0) hwa event scheduled
+wl_host_event: WLC_E_BSSCFG_UP for idx[0] ifname[wl0] mld_unit[255]
+wl0: dhd_prot_ioctl: status ret value is -23 iov=wowl
+CFG80211-ERROR) wl_allocate_wowl_config : Wowl not supported (-23)
+SBF: DNGL  SBFTBL[2.0.0] hme [0xf3a05000] size [8192]
+SBF:              entries [1024] type [1] offsets [16] [0]
+SBF: HOST  SBFTBL[2.0.0] Initialized Type [1]
+SBF: hdr [0xf3a05000] bfwtbl [0xf3a05010] local_bfw [0xc54df800]
+dhd_hwa_event: Dongle(wl0) schedule hwa event
+dhd_hwa_event_handler: Dongle(wl0) hwa event scheduled
+wl_host_event: WLC_E_BSSCFG_UP for idx[0] ifname[wl0] mld_unit[255]
+wl0: dhd_prot_ioctl: status ret value is -23 iov=wowl
+CFG80211-ERROR) wl_allocate_wowl_config : Wowl not supported (-23)
+osl_skb_audit: PASS 
+wl_module_init: passivemode set to 0x1
+wl_module_init: txworkq set to 0x0
+[0;32mwl_pktfwd_sys_init:  [1m[34mWL_PKTFWD[1.1.0][0m Success[0m
+wl 0000:01:00.0: enabling device (0140 -> 0142)
+0000:01:00.0: domain 0 dev_to_ifid_map ffffffff
+wl_get_next_instance: enter: wl_found 0 inst 1
+wl_get_next_instance: exit: inst 1
+0000:01:00.0: unit 1
+wl1: creating kthread wl1-kthrd
+si_doattach: Embedded WLAN core (devid:0x6039) pseudo-PCI, switching to SI;BAR0 enum_base_pa=0x90000000 / bp_pa=0x90000000 / va=0xf5f80000
+M2MDMA: core 0 initialized, rev=136 si_flag=0x0 regs=0852c5f0
+M2MDMA: core 1 initialized, rev=136 si_flag=0x0 regs=464d45c6
+BME Service Initialization
+BME: M2M Core rev 136
+M2M: Service Initialization: M2M_DD_ENAB 0x00000003
+M2M: SUCCESS eng 0 alloc rings <07f21e1a,760d0e28>,57d1753c depth 256
+M2M: SUCCESS eng 1 alloc rings <2bd96e84,f698e25b>,df22a2b7 depth 256
+M2M: DMA 0 IntRcvLazy 01000000
+M2M: DMA 0 RcvCtrl XmtCtrl enabled
+M2M: DMA 1 IntRcvLazy 01000000
+M2M: DMA 1 RcvCtrl XmtCtrl enabled
+nbuff_pp_xpm_init: USING BPM pktpool initialization SUCCESS
+wl1: phy_radio_attach: RF Band Cap: 2G:1 5G:1 6G:1
+phy_ac_radio20712_pll_config_const_calc, xtal_freq = 0x04c4b400, nf = 24
+rfem_dbg. 5g. rfem_pa SROM = 6, efuse = 6. final = 6.5, rfem_boardrev = 0
+WET:wet_maxip_per_sta=2
+CPU DBG: dbgstrs SYNC complete
+BME:register key<1010804> user RLM sel IDX set 1 mem 4 8 hi 0 0
+PHYDSP: STF SROM Params: hw cap 0xf/0xf sw 0x0/0x0 swmask 0x0 c3p1c 0x0
+wl1: wlc_phydsp_get_fw for corerev=136 & Ntx=4: 4x4 11be wav2 ver 2.22
+wl1 taf_do_enable: TAF is enabled
+CSIMON module registered
+		Pool[LCL_SMALL] Config: idx_lo:0 total:64
+		Pool[LCL_MED] Config: idx_lo:64 total:60
+		Pool[LCL_LARGE] Config: idx_lo:124 total:4
+		Pool[MLO_SMALL] Config: idx_lo:128 total:64
+		Pool[MLO_MED] Config: idx_lo:192 total:60
+		Pool[MLO_LARGE] Config: idx_lo:252 total:4
+PUQ Manager Rev1.0: PUQ Total:256 Reserved:4
+ pool LCL_SMALL range[0:63] total 64 IDL 60 CLR 0 SCH 0 D11 0 [D11_SCH 0] ORP 0 PGI 0 PGO 0
+	STATS::  alloc[rqst 0 fail 0] free[rqst 0 pout 0 clrs 0]
+ pool LCL_MED range[64:123] total 60 IDL 60 CLR 0 SCH 0 D11 0 [D11_SCH 0] ORP 0 PGI 0 PGO 0
+	STATS::  alloc[rqst 0 fail 0] free[rqst 0 pout 0 clrs 0]
+ pool LCL_LARGE range[124:127] total 4 IDL 4 CLR 0 SCH 0 D11 0 [D11_SCH 0] ORP 0 PGI 0 PGO 0
+	STATS::  alloc[rqst 0 fail 0] free[rqst 0 pout 0 clrs 0]
+ pool MLO_SMALL range[128:191] total 64 IDL 64 CLR 0 SCH 0 D11 0 [D11_SCH 0] ORP 0 PGI 0 PGO 0
+	STATS::  alloc[rqst 0 fail 0] free[rqst 0 pout 0 clrs 0]
+ pool MLO_MED range[192:251] total 60 IDL 60 CLR 0 SCH 0 D11 0 [D11_SCH 0] ORP 0 PGI 0 PGO 0
+	STATS::  alloc[rqst 0 fail 0] free[rqst 0 pout 0 clrs 0]
+ pool MLO_LARGE range[252:255] total 4 IDL 4 CLR 0 SCH 0 D11 0 [D11_SCH 0] ORP 0 PGI 0 PGO 0
+	STATS::  alloc[rqst 0 fail 0] free[rqst 0 pout 0 clrs 0]
+wl1: PUQ Manager Rev1.0 Initialized. 4865 bytes
+000000
+030000
+BME:register key<6010408> user FTM sel IDX set 1 mem 8 4 hi 0 0
+wl1_awl attach successful tx: 1, rx: 2
+crossbow_wlan_fw_index_alloc(1) = 1
+Socket: 1, fwq budget 280
+Socket: 1, rxq max_pkts 8192 budget 21
+WL_FLCTL[1] prio_favor 255
+LLCSNAP insertion supported for radio index 1
+[0;34mCrossbow WLAN Bind: wl1, radio_index 1, mode SKB[0m
+[0;32mwl_wfd_bind: wl1 wfd_idx 1 success[0m
+CFG80211-ERROR) wl_setup_wiphy : Registering Vendor80211
+Assigning idx[19] for wl1
+wl1_awl registered [wl1]
+wl1: Broadcom BCM6039 802.11 Wireless Controller 25.438.32 (r849162) [4da17911c]
+dgasp: kerSysRegisterDyingGaspHandler: wl1 registered 
+wl 0001:01:01.0: enabling device (0140 -> 0142)
+wl2: creating kthread wl2-kthrd
+si_doattach: Embedded WLAN core (devid:0x6038) pseudo-PCI, switching to SI;BAR0 enum_base_pa=0x98000000 / bp_pa=0x90000000 / va=0xf6f00000
+M2MDMA: core 0 initialized, rev=136 si_flag=0x0 regs=280e6e24
+M2MDMA: core 1 initialized, rev=136 si_flag=0x0 regs=efde1526
+BME Service Initialization
+BME: M2M Core rev 136
+M2M: Service Initialization: M2M_DD_ENAB 0x00000003
+M2M: SUCCESS eng 0 alloc rings <55771784,5d07a81b>,c6cc0b42 depth 256
+M2M: SUCCESS eng 1 alloc rings <30e4239e,67af268b>,ae4b592f depth 256
+M2M: DMA 0 IntRcvLazy 01000000
+M2M: DMA 0 RcvCtrl XmtCtrl enabled
+M2M: DMA 1 IntRcvLazy 01000000
+M2M: DMA 1 RcvCtrl XmtCtrl enabled
+nbuff_pp_xpm_init: USING BPM pktpool initialization SUCCESS
+wl2: phy_radio_attach: RF Band Cap: 2G:1 5G:1 6G:1
+WET:wet_maxip_per_sta=2
+CPU DBG: dbgstrs SYNC complete
+BME:register key<1010804> user RLM sel IDX set 1 mem 4 8 hi 0 0
+PHYDSP: STF SROM Params: hw cap 0x3/0x3 sw 0x0/0x0 swmask 0x0 c3p1c 0x0
+wl2: wlc_phydsp_get_fw for corerev=137 & Ntx=2: 2x2 11be ver 2.22
+wl2 taf_do_enable: TAF is enabled
+dhd_hwa_event: Dongle(wl0) schedule hwa event
+CSIMON module registered
+dhd_hwa_event_handler: Dongle(wl0) hwa event scheduled
+		Pool[LCL_SMALL] Config: idx_lo:0 total:64
+wl_host_event: WLC_E_BSSCFG_UP for idx[0] ifname[wl0] mld_unit[255]
+		Pool[LCL_MED] Config: idx_lo:64 total:60
+		Pool[LCL_LARGE] Config: idx_lo:124 total:4
+		Pool[MLO_SMALL] Config: idx_lo:128 total:64
+		Pool[MLO_MED] Config: idx_lo:192 total:60
+		Pool[MLO_LARGE] Config: idx_lo:252 total:4
+PUQ Manager Rev1.0: PUQ Total:256 Reserved:4
+ pool LCL_SMALL range[0:63] total 64 IDL 60 CLR 0 SCH 0 D11 0 [D11_SCH 0] ORP 0 PGI 0 PGO 0
+	STATS::  alloc[rqst 0 fail 0] free[rqst 0 pout 0 clrs 0]
+ pool LCL_MED range[64:123] total 60 IDL 60 CLR 0 SCH 0 D11 0 [D11_SCH 0] ORP 0 PGI 0 PGO 0
+	STATS::  alloc[rqst 0 fail 0] free[rqst 0 pout 0 clrs 0]
+ pool LCL_LARGE range[124:127] total 4 IDL 4 CLR 0 SCH 0 D11 0 [D11_SCH 0] ORP 0 PGI 0 PGO 0
+	STATS::  alloc[rqst 0 fail 0] free[rqst 0 pout 0 clrs 0]
+ pool MLO_SMALL range[128:191] total 64 IDL 64 CLR 0 SCH 0 D11 0 [D11_SCH 0] ORP 0 PGI 0 PGO 0
+	STATS::  alloc[rqst 0 fail 0] free[rqst 0 pout 0 clrs 0]
+ pool MLO_MED range[192:251] total 60 IDL 60 CLR 0 SCH 0 D11 0 [D11_SCH 0] ORP 0 PGI 0 PGO 0
+	STATS::  alloc[rqst 0 fail 0] free[rqst 0 pout 0 clrs 0]
+ pool MLO_LARGE range[252:255] total 4 IDL 4 CLR 0 SCH 0 D11 0 [D11_SCH 0] ORP 0 PGI 0 PGO 0
+	STATS::  alloc[rqst 0 fail 0] free[rqst 0 pout 0 clrs 0]
+wl2: PUQ Manager Rev1.0 Initialized. 4865 bytes
+000000
+030000
+BME:register key<6010408> user FTM sel IDX set 1 mem 8 4 hi 0 0
+wl2_awl attach successful tx: 1, rx: 2
+crossbow_wlan_fw_index_alloc(2) = 2
+Socket: 2, fwq budget 280
+Socket: 2, rxq max_pkts 8192 budget 21
+WL_FLCTL[2] prio_favor 255
+LLCSNAP insertion supported for radio index 2
+[0;34mCrossbow WLAN Bind: wl2, radio_index 2, mode SKB[0m
+[0;32mwl_wfd_bind: wl2 wfd_idx 2 success[0m
+wl0: dhd_prot_ioctl: status ret value is -23 iov=wowl
+CFG80211-ERROR) wl_allocate_wowl_config : Wowl not supported (-23)
+CFG80211-ERROR) wl_setup_wiphy : Registering Vendor80211
+Assigning idx[20] for wl2
+wl2_awl registered [wl2]
+wl2: Broadcom BCM6038 802.11 Wireless Controller 25.438.32 (r849162) [4da17911c]
+dgasp: kerSysRegisterDyingGaspHandler: wl2 registered 
+wl1: Initialize puqlmidx to 0
+SMAC: wlc_smacfw_download: CM7 FW downloaded
+wl1: wlc_phydspfw_download, corerev=136, srom_Ntx=4
+wl1: wlc_phydsp_get_fw for corerev=136 & Ntx=4: 4x4 11be wav2 ver 2.22
+wl1: wlc_phydspfw_download done! FW_Ntx=4
+wl1: wlc_macdbg_cpudbg_xfer_init: NIC xfer_size 128 da_base_h 0 da_base_l 8950000 sa_base_h 0 sa_base_l 96a10000
+wl1: wlc_macdbg_cpudbg_update_shmx: set cpudbg_config [0x7] at location 1c in SHMX
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 388571400
+SMAC: wlc_smacfw_start: CM7 FW enabled
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 388571400
+wl1: Initialize Rsvd puqs side channel/meta data
+wl1: wlc_ftm_hal_csi_buf_get:1742: hal 3b08118d
+wl1: taf_do_tab_enable: [tab] 0, ret 0
+CSIMON:  CSIMON[1.1.1] Initialization
+wl1 enable 1: q0 frmcnt 0, wrdcnt 0, q1 frmcnt 0, wrdcnt 0
+wl1: Initialize puqlmidx to 0
+SMAC: wlc_smacfw_download: CM7 FW downloaded
+wl1: wlc_phydspfw_download, corerev=136, srom_Ntx=4
+wl1: wlc_phydsp_get_fw for corerev=136 & Ntx=4: 4x4 11be wav2 ver 2.22
+wl1: wlc_phydspfw_download done! FW_Ntx=4
+wl1: wlc_macdbg_cpudbg_update_shmx: set cpudbg_config [0x7] at location 1c in SHMX
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 388571400
+SMAC: wlc_smacfw_start: CM7 FW enabled
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 388571400
+wl1: Initialize Rsvd puqs side channel/meta data
+wl1: wlc_ftm_hal_csi_buf_get:1742: hal 3b08118d
+wl1: taf_do_tab_enable: [tab] 0, ret 0
+CSIMON:  CSIMON[1.1.1] Initialization
+CSIMON: M2M usr already registered ...
+wl1 enable 1: q0 frmcnt 0, wrdcnt 0, q1 frmcnt 0, wrdcnt 0
+CFG80211-ERROR) wl_allocate_wowl_config : Wowl not supported (-23)
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+eth1 (Int switch port: 0) (Logical Port: 0) (phyId: 8) Link Up at 100 mbps full duplex AN: On
+wl0: dhd_prot_ioctl: status ret value is -23 iov=wowl
+CFG80211-ERROR) wl_allocate_wowl_config : Wowl not supported (-23)
+wl1: Initialize puqlmidx to 0
+SMAC: wlc_smacfw_download: CM7 FW downloaded
+wl1: wlc_phydspfw_download, corerev=136, srom_Ntx=4
+wl1: wlc_phydsp_get_fw for corerev=136 & Ntx=4: 4x4 11be wav2 ver 2.22
+wl1: wlc_phydspfw_download done! FW_Ntx=4
+wl1: wlc_macdbg_cpudbg_update_shmx: set cpudbg_config [0x7] at location 1c in SHMX
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 388571400
+SMAC: wlc_smacfw_start: CM7 FW enabled
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 388571400
+wl1: Initialize Rsvd puqs side channel/meta data
+wl1: wlc_ftm_hal_csi_buf_get:1742: hal 3b08118d
+wl1: taf_do_tab_enable: [tab] 0, ret 0
+CSIMON:  CSIMON[1.1.1] Initialization
+CSIMON: M2M usr already registered ...
+wl1 enable 1: q0 frmcnt 0, wrdcnt 0, q1 frmcnt 0, wrdcnt 0
+wl1: Initialize puqlmidx to 0
+SMAC: wlc_smacfw_download: CM7 FW downloaded
+wl1: wlc_phydspfw_download, corerev=136, srom_Ntx=4
+wl1: wlc_phydsp_get_fw for corerev=136 & Ntx=4: 4x4 11be wav2 ver 2.22
+wl1: wlc_phydspfw_download done! FW_Ntx=4
+wl1: wlc_macdbg_cpudbg_update_shmx: set cpudbg_config [0x7] at location 1c in SHMX
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 388571400
+SMAC: wlc_smacfw_start: CM7 FW enabled
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 388571400
+wl1: Initialize Rsvd puqs side channel/meta data
+wl1: wlc_ftm_hal_csi_buf_get:1742: hal 3b08118d
+wl1: taf_do_tab_enable: [tab] 0, ret 0
+CSIMON:  CSIMON[1.1.1] Initialization
+CSIMON: M2M usr already registered ...
+wl1 enable 1: q0 frmcnt 0, wrdcnt 0, q1 frmcnt 0, wrdcnt 0
+CFG80211-ERROR) wl_allocate_wowl_config : Wowl not supported (-23)
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+wl2: Initialize puqlmidx to 0
+SMAC: wlc_smacfw_download: CM7 FW downloaded
+wl2: wlc_phydspfw_download, corerev=137, srom_Ntx=2
+wl2: wlc_phydsp_get_fw for corerev=137 & Ntx=2: 2x2 11be ver 2.22
+wl2: wlc_phydspfw_download done! FW_Ntx=2
+wl2: wlc_macdbg_cpudbg_xfer_init: NIC xfer_size 128 da_base_h 0 da_base_l 9d50000 sa_base_h 0 sa_base_l 96a10000
+wl2: wlc_macdbg_cpudbg_update_shmx: set cpudbg_config [0x7] at location 1c in SHMX
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 302220000
+SMAC: wlc_smacfw_start: CM7 FW enabled
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 302220000
+wl2: Initialize Rsvd puqs side channel/meta data
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 302220000
+wl2: wlc_ftm_hal_csi_buf_get:1742: hal e5eddc3b
+wl2: taf_do_tab_enable: [tab] 0, ret 0
+CSIMON:  CSIMON[1.1.1] Initialization
+wl2 enable 1: q0 frmcnt 0, wrdcnt 0, q1 frmcnt 0, wrdcnt 0
+wl2: Initialize puqlmidx to 0
+SMAC: wlc_smacfw_download: CM7 FW downloaded
+wl2: wlc_phydspfw_download, corerev=137, srom_Ntx=2
+wl2: wlc_phydsp_get_fw for corerev=137 & Ntx=2: 2x2 11be ver 2.22
+wl2: wlc_phydspfw_download done! FW_Ntx=2
+wl2: wlc_macdbg_cpudbg_update_shmx: set cpudbg_config [0x7] at location 1c in SHMX
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 302220000
+SMAC: wlc_smacfw_start: CM7 FW enabled
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 302220000
+wl2: Initialize Rsvd puqs side channel/meta data
+wl2: wlc_ftm_hal_csi_buf_get:1742: hal e5eddc3b
+wl2: taf_do_tab_enable: [tab] 0, ret 0
+CSIMON:  CSIMON[1.1.1] Initialization
+CSIMON: M2M usr already registered ...
+wl2 enable 1: q0 frmcnt 0, wrdcnt 0, q1 frmcnt 0, wrdcnt 0
+CFG80211-ERROR) wl_allocate_wowl_config : Wowl not supported (-23)
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+eth1 (Int switch port: 0) (Logical Port: 0) (phyId: 8) Link DOWN.
+wl0: dhd_prot_ioctl: status ret value is -23 iov=wowl
+CFG80211-ERROR) wl_allocate_wowl_config : Wowl not supported (-23)
+wl1: Initialize puqlmidx to 0
+SMAC: wlc_smacfw_download: CM7 FW downloaded
+wl1: wlc_phydspfw_download, corerev=136, srom_Ntx=4
+wl1: wlc_phydsp_get_fw for corerev=136 & Ntx=4: 4x4 11be wav2 ver 2.22
+wl1: wlc_phydspfw_download done! FW_Ntx=4
+wl1: wlc_macdbg_cpudbg_update_shmx: set cpudbg_config [0x7] at location 1c in SHMX
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 388571400
+SMAC: wlc_smacfw_start: CM7 FW enabled
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 388571400
+wl1: Initialize Rsvd puqs side channel/meta data
+wl1: wlc_ftm_hal_csi_buf_get:1742: hal 3b08118d
+wl1: taf_do_tab_enable: [tab] 0, ret 0
+CSIMON:  CSIMON[1.1.1] Initialization
+CSIMON: M2M usr already registered ...
+wl1 enable 1: q0 frmcnt 0, wrdcnt 0, q1 frmcnt 0, wrdcnt 0
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+wl1: Initialize puqlmidx to 0
+SMAC: wlc_smacfw_download: CM7 FW downloaded
+wl1: wlc_phydspfw_download, corerev=136, srom_Ntx=4
+wl1: wlc_phydsp_get_fw for corerev=136 & Ntx=4: 4x4 11be wav2 ver 2.22
+wl1: wlc_phydspfw_download done! FW_Ntx=4
+wl1: wlc_macdbg_cpudbg_update_shmx: set cpudbg_config [0x7] at location 1c in SHMX
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 388571400
+SMAC: wlc_smacfw_start: CM7 FW enabled
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 388571400
+wl1: Initialize Rsvd puqs side channel/meta data
+wl1: wlc_ftm_hal_csi_buf_get:1742: hal 3b08118d
+wl1: taf_do_tab_enable: [tab] 0, ret 0
+CSIMON:  CSIMON[1.1.1] Initialization
+CSIMON: M2M usr already registered ...
+wl1 enable 1: q0 frmcnt 0, wrdcnt 0, q1 frmcnt 0, wrdcnt 0
+CFG80211-ERROR) wl_allocate_wowl_config : Wowl not supported (-23)
+Assigning idx[21] for br-lan
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+wl2: Initialize puqlmidx to 0
+SMAC: wlc_smacfw_download: CM7 FW downloaded
+wl2: wlc_phydspfw_download, corerev=137, srom_Ntx=2
+wl2: wlc_phydsp_get_fw for corerev=137 & Ntx=2: 2x2 11be ver 2.22
+wl2: wlc_phydspfw_download done! FW_Ntx=2
+wl2: wlc_macdbg_cpudbg_update_shmx: set cpudbg_config [0x7] at location 1c in SHMX
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 302220000
+SMAC: wlc_smacfw_start: CM7 FW enabled
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 302220000
+wl2: Initialize Rsvd puqs side channel/meta data
+wl2: wlc_ftm_hal_csi_buf_get:1742: hal e5eddc3b
+wl2: taf_do_tab_enable: [tab] 0, ret 0
+CSIMON:  CSIMON[1.1.1] Initialization
+CSIMON: M2M usr already registered ...
+wl2 enable 1: q0 frmcnt 0, wrdcnt 0, q1 frmcnt 0, wrdcnt 0
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+wl2: Initialize puqlmidx to 0
+SMAC: wlc_smacfw_download: CM7 FW downloaded
+wl2: wlc_phydspfw_download, corerev=137, srom_Ntx=2
+wl2: wlc_phydsp_get_fw for corerev=137 & Ntx=2: 2x2 11be ver 2.22
+wl2: wlc_phydspfw_download done! FW_Ntx=2
+wl2: wlc_macdbg_cpudbg_update_shmx: set cpudbg_config [0x7] at location 1c in SHMX
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 302220000
+SMAC: wlc_smacfw_start: CM7 FW enabled
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 302220000
+wl2: Initialize Rsvd puqs side channel/meta data
+wl2: wlc_ftm_hal_csi_buf_get:1742: hal e5eddc3b
+wl2: taf_do_tab_enable: [tab] 0, ret 0
+CSIMON:  CSIMON[1.1.1] Initialization
+CSIMON: M2M usr already registered ...
+wl2 enable 1: q0 frmcnt 0, wrdcnt 0, q1 frmcnt 0, wrdcnt 0
+CFG80211-ERROR) wl_allocate_wowl_config : Wowl not supported (-23)
+Assigning idx[22] for br-guest
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+eth1 (Int switch port: 0) (Logical Port: 0) (phyId: 8) Link Up at 100 mbps full duplex AN: On
+Assigning idx[23] for br-lcm
+wl0: dhd_prot_ioctl: status ret value is -23 iov=wowl
+CFG80211-ERROR) wl_allocate_wowl_config : Wowl not supported (-23)
+wl1: Initialize puqlmidx to 0
+SMAC: wlc_smacfw_download: CM7 FW downloaded
+wl1: wlc_phydspfw_download, corerev=136, srom_Ntx=4
+wl1: wlc_phydsp_get_fw for corerev=136 & Ntx=4: 4x4 11be wav2 ver 2.22
+wl1: wlc_phydspfw_download done! FW_Ntx=4
+wl1: wlc_macdbg_cpudbg_update_shmx: set cpudbg_config [0x7] at location 1c in SHMX
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 388571400
+SMAC: wlc_smacfw_start: CM7 FW enabled
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 388571400
+wl1: Initialize Rsvd puqs side channel/meta data
+wl1: wlc_ftm_hal_csi_buf_get:1742: hal 3b08118d
+wl1: taf_do_tab_enable: [tab] 0, ret 0
+CSIMON:  CSIMON[1.1.1] Initialization
+CSIMON: M2M usr already registered ...
+wl1 enable 1: q0 frmcnt 0, wrdcnt 0, q1 frmcnt 0, wrdcnt 0
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+wl1: Initialize puqlmidx to 0
+SMAC: wlc_smacfw_download: CM7 FW downloaded
+wl1: wlc_phydspfw_download, corerev=136, srom_Ntx=4
+wl1: wlc_phydsp_get_fw for corerev=136 & Ntx=4: 4x4 11be wav2 ver 2.22
+wl1: wlc_phydspfw_download done! FW_Ntx=4
+wl1: wlc_macdbg_cpudbg_update_shmx: set cpudbg_config [0x7] at location 1c in SHMX
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 388571400
+SMAC: wlc_smacfw_start: CM7 FW enabled
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 388571400
+wl1: Initialize Rsvd puqs side channel/meta data
+wl1: wlc_ftm_hal_csi_buf_get:1742: hal 3b08118d
+wl1: taf_do_tab_enable: [tab] 0, ret 0
+CSIMON:  CSIMON[1.1.1] Initialization
+CSIMON: M2M usr already registered ...
+wl1 enable 1: q0 frmcnt 0, wrdcnt 0, q1 frmcnt 0, wrdcnt 0
+CFG80211-ERROR) wl_allocate_wowl_config : Wowl not supported (-23)
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+wl2: Initialize puqlmidx to 0
+SMAC: wlc_smacfw_download: CM7 FW downloaded
+wl2: wlc_phydspfw_download, corerev=137, srom_Ntx=2
+wl2: wlc_phydsp_get_fw for corerev=137 & Ntx=2: 2x2 11be ver 2.22
+wl2: wlc_phydspfw_download done! FW_Ntx=2
+wl2: wlc_macdbg_cpudbg_update_shmx: set cpudbg_config [0x7] at location 1c in SHMX
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 302220000
+SMAC: wlc_smacfw_start: CM7 FW enabled
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 302220000
+wl2: Initialize Rsvd puqs side channel/meta data
+wl2: wlc_ftm_hal_csi_buf_get:1742: hal e5eddc3b
+wl2: taf_do_tab_enable: [tab] 0, ret 0
+CSIMON:  CSIMON[1.1.1] Initialization
+CSIMON: M2M usr already registered ...
+wl2 enable 1: q0 frmcnt 0, wrdcnt 0, q1 frmcnt 0, wrdcnt 0
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+wl2: Initialize puqlmidx to 0
+SMAC: wlc_smacfw_download: CM7 FW downloaded
+wl2: wlc_phydspfw_download, corerev=137, srom_Ntx=2
+wl2: wlc_phydsp_get_fw for corerev=137 & Ntx=2: 2x2 11be ver 2.22
+wl2: wlc_phydspfw_download done! FW_Ntx=2
+wl2: wlc_macdbg_cpudbg_update_shmx: set cpudbg_config [0x7] at location 1c in SHMX
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 302220000
+SMAC: wlc_smacfw_start: CM7 FW enabled
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 302220000
+wl2: Initialize Rsvd puqs side channel/meta data
+wl2: wlc_ftm_hal_csi_buf_get:1742: hal e5eddc3b
+wl2: taf_do_tab_enable: [tab] 0, ret 0
+CSIMON:  CSIMON[1.1.1] Initialization
+CSIMON: M2M usr already registered ...
+wl2 enable 1: q0 frmcnt 0, wrdcnt 0, q1 frmcnt 0, wrdcnt 0
+CFG80211-ERROR) wl_allocate_wowl_config : Wowl not supported (-23)
+eth1 (Int switch port: 0) (Logical Port: 0) (phyId: 8) Link Up at 100 mbps full duplex AN: On
+br-lan: port 1(eth1) entered blocking state
+br-lan: port 1(eth1) entered disabled state
+device eth1 entered promiscuous mode
+br-lan: port 1(eth1) entered blocking state
+br-lan: port 1(eth1) entered forwarding state
+Wait Instruction is disabled
+eth1 (Int switch port: 0) (Logical Port: 0) (phyId: 8) Link DOWN.
+br-lan: port 1(eth1) entered disabled state
+wl0: dhd_prot_ioctl: status ret value is -23 iov=wowl
+CFG80211-ERROR) wl_allocate_wowl_config : Wowl not supported (-23)
+wl1: Initialize puqlmidx to 0
+SMAC: wlc_smacfw_download: CM7 FW downloaded
+wl1: wlc_phydspfw_download, corerev=136, srom_Ntx=4
+wl1: wlc_phydsp_get_fw for corerev=136 & Ntx=4: 4x4 11be wav2 ver 2.22
+wl1: wlc_phydspfw_download done! FW_Ntx=4
+wl1: wlc_macdbg_cpudbg_update_shmx: set cpudbg_config [0x7] at location 1c in SHMX
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 388571400
+SMAC: wlc_smacfw_start: CM7 FW enabled
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 388571400
+wl1: Initialize Rsvd puqs side channel/meta data
+wl1: wlc_ftm_hal_csi_buf_get:1742: hal 3b08118d
+wl1: taf_do_tab_enable: [tab] 0, ret 0
+CSIMON:  CSIMON[1.1.1] Initialization
+CSIMON: M2M usr already registered ...
+wl1 enable 1: q0 frmcnt 0, wrdcnt 0, q1 frmcnt 0, wrdcnt 0
+net_ratelimit: 1 callbacks suppressed
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+wl1: Initialize puqlmidx to 0
+SMAC: wlc_smacfw_download: CM7 FW downloaded
+wl1: wlc_phydspfw_download, corerev=136, srom_Ntx=4
+wl1: wlc_phydsp_get_fw for corerev=136 & Ntx=4: 4x4 11be wav2 ver 2.22
+wl1: wlc_phydspfw_download done! FW_Ntx=4
+wl1: wlc_macdbg_cpudbg_update_shmx: set cpudbg_config [0x7] at location 1c in SHMX
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 388571400
+SMAC: wlc_smacfw_start: CM7 FW enabled
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 388571400
+wl1: Initialize Rsvd puqs side channel/meta data
+wl1: wlc_ftm_hal_csi_buf_get:1742: hal 3b08118d
+wl1: taf_do_tab_enable: [tab] 0, ret 0
+CSIMON:  CSIMON[1.1.1] Initialization
+CSIMON: M2M usr already registered ...
+wl1 enable 1: q0 frmcnt 0, wrdcnt 0, q1 frmcnt 0, wrdcnt 0
+eth1 (Int switch port: 0) (Logical Port: 0) (phyId: 8) Link Up at 100 mbps full duplex AN: On
+CFG80211-ERROR) wl_allocate_wowl_config : Wowl not supported (-23)
+br-lan: port 1(eth1) entered blocking state
+br-lan: port 1(eth1) entered forwarding state
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+wl2: Initialize puqlmidx to 0
+SMAC: wlc_smacfw_download: CM7 FW downloaded
+wl2: wlc_phydspfw_download, corerev=137, srom_Ntx=2
+wl2: wlc_phydsp_get_fw for corerev=137 & Ntx=2: 2x2 11be ver 2.22
+wl2: wlc_phydspfw_download done! FW_Ntx=2
+wl2: wlc_macdbg_cpudbg_update_shmx: set cpudbg_config [0x7] at location 1c in SHMX
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 302220000
+SMAC: wlc_smacfw_start: CM7 FW enabled
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 302220000
+wl2: Initialize Rsvd puqs side channel/meta data
+wl2: wlc_ftm_hal_csi_buf_get:1742: hal e5eddc3b
+wl2: taf_do_tab_enable: [tab] 0, ret 0
+CSIMON:  CSIMON[1.1.1] Initialization
+CSIMON: M2M usr already registered ...
+wl2 enable 1: q0 frmcnt 0, wrdcnt 0, q1 frmcnt 0, wrdcnt 0
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+wl2: Initialize puqlmidx to 0
+SMAC: wlc_smacfw_download: CM7 FW downloaded
+wl2: wlc_phydspfw_download, corerev=137, srom_Ntx=2
+wl2: wlc_phydsp_get_fw for corerev=137 & Ntx=2: 2x2 11be ver 2.22
+wl2: wlc_phydspfw_download done! FW_Ntx=2
+wl2: wlc_macdbg_cpudbg_update_shmx: set cpudbg_config [0x7] at location 1c in SHMX
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 302220000
+SMAC: wlc_smacfw_start: CM7 FW enabled
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 302220000
+wl2: Initialize Rsvd puqs side channel/meta data
+wl2: wlc_ftm_hal_csi_buf_get:1742: hal e5eddc3b
+wl2: taf_do_tab_enable: [tab] 0, ret 0
+CSIMON:  CSIMON[1.1.1] Initialization
+CSIMON: M2M usr already registered ...
+wl2 enable 1: q0 frmcnt 0, wrdcnt 0, q1 frmcnt 0, wrdcnt 0
+CFG80211-ERROR) wl_allocate_wowl_config : Wowl not supported (-23)
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+dhd_set_mac_addr_handler: MACID is overwritten
+CFG80211-ERROR) wl_cfg80211_add_virtual_iface : Recvd application provided mac address:cc:4e:ec:d2:39:e6
+[dhd_allocate_if] Allocated wl0.1 dev 1b878de0 
+Assigning idx[24] for wl0.1
+dhd0_awl registered [wl0.1]
+Register interface [wl0.1]  MAC: cc:4e:ec:d2:39:e6
+
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+wl1: Initialize puqlmidx to 0
+SMAC: wlc_smacfw_download: CM7 FW downloaded
+wl1: wlc_phydspfw_download, corerev=136, srom_Ntx=4
+wl1: wlc_phydsp_get_fw for corerev=136 & Ntx=4: 4x4 11be wav2 ver 2.22
+wl1: wlc_phydspfw_download done! FW_Ntx=4
+wl1: wlc_macdbg_cpudbg_update_shmx: set cpudbg_config [0x7] at location 1c in SHMX
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 388571400
+SMAC: wlc_smacfw_start: CM7 FW enabled
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 388571400
+wl1: Initialize Rsvd puqs side channel/meta data
+wl1: wlc_ftm_hal_csi_buf_get:1742: hal 3b08118d
+wl1: taf_do_tab_enable: [tab] 0, ret 0
+CSIMON:  CSIMON[1.1.1] Initialization
+CSIMON: M2M usr already registered ...
+wl1 enable 1: q0 frmcnt 0, wrdcnt 0, q1 frmcnt 0, wrdcnt 0
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+Assigning idx[25] for wl1.1
+wl1_awl registered [wl1.1]
+wl2: Initialize puqlmidx to 0
+SMAC: wlc_smacfw_download: CM7 FW downloaded
+wl2: wlc_phydspfw_download, corerev=137, srom_Ntx=2
+wl2: wlc_phydsp_get_fw for corerev=137 & Ntx=2: 2x2 11be ver 2.22
+wl2: wlc_phydspfw_download done! FW_Ntx=2
+wl2: wlc_macdbg_cpudbg_update_shmx: set cpudbg_config [0x7] at location 1c in SHMX
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 302220000
+SMAC: wlc_smacfw_start: CM7 FW enabled
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 302220000
+wl2: Initialize Rsvd puqs side channel/meta data
+wl2: wlc_ftm_hal_csi_buf_get:1742: hal e5eddc3b
+wl2: taf_do_tab_enable: [tab] 0, ret 0
+CSIMON:  CSIMON[1.1.1] Initialization
+CSIMON: M2M usr already registered ...
+wl2 enable 1: q0 frmcnt 0, wrdcnt 0, q1 frmcnt 0, wrdcnt 0
+net_ratelimit: 6 callbacks suppressed
+CFG80211-ERROR) wl_cfg80211_add_virtual_iface : Recvd application provided mac address:ce:4e:ec:d2:3c:f8
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+Assigning idx[26] for wl2.1
+wl2_awl registered [wl2.1]
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+wl0: dhd_prot_ioctl: status ret value is -23 iov=wowl
+CFG80211-ERROR) wl_allocate_wowl_config : Wowl not supported (-23)
+wl0: dhd_prot_ioctl: status ret value is -7 iov=roam_off
+dhd_hwa_event: Dongle(wl0) schedule hwa event
+dhd_hwa_event_handler: Dongle(wl0) hwa event scheduled
+wl_host_event: WLC_E_BSSCFG_UP for idx[0] ifname[wl0] mld_unit[255]
+overlayfs: failed to set xattr on upper
+wl0: dhd_prot_ioctl: status ret value is -29 iov=bsscfg:rxchain
+wl0: dhd_prot_ioctl: status ret value is -23 cmd=110
+wl0: dhd_prot_ioctl: status ret value is -23 iov=bsscfg:atf
+wl0: dhd_prot_ioctl: status ret value is -23 iov=bsscfg:rifs
+wl0: dhd_prot_ioctl: status ret value is -23 iov=bsscfg:wmf_bss_enable
+wl0: dhd_prot_ioctl: status ret value is -23 iov=bsscfg:wmf_bss_enable
+dhd_hwa_event: Dongle(wl0) schedule hwa event
+dhd_hwa_event_handler: Dongle(wl0) hwa event scheduled
+wl_host_event: WLC_E_BSSCFG_UP for idx[0] ifname[wl0] mld_unit[255]
+wl0: dhd_prot_ioctl: status ret value is -23 iov=wowl
+CFG80211-ERROR) wl_allocate_wowl_config : Wowl not supported (-23)
+br-lan: port 2(wl0) entered blocking state
+br-lan: port 2(wl0) entered disabled state
+device wl0 entered promiscuous mode
+br-lan: port 2(wl0) entered blocking state
+br-lan: port 2(wl0) entered forwarding state
+wl0: dhd_prot_ioctl: status ret value is -23 iov=mfp_ocv
+CFG80211-ERROR) wl_validate_set_ocv_cap : ocv_cap unsupported -23
+CFG80211-ERROR) wl_set_beacon_protection : Enter 
+wl_host_event: WLC_E_BSSCFG_UP for idx[0] ifname[wl0] mld_unit[255]
+CFG80211-ERROR) wl_cfg80211_add_virtual_iface : Recvd application provided mac address:cc:4e:ec:d2:39:e6
+dhd_set_mac_addr_handler: MACID is overwritten
+br-lan: port 3(wl0.1) entered blocking state
+br-lan: port 3(wl0.1) entered disabled state
+device wl0.1 entered promiscuous mode
+br-lan: port 3(wl0.1) entered blocking state
+br-lan: port 3(wl0.1) entered forwarding state
+wl0.1: dhd_prot_ioctl: status ret value is -23 iov=bsscfg:mfp_ocv
+CFG80211-ERROR) wl_validate_set_ocv_cap : ocv_cap unsupported -23
+CFG80211-ERROR) wl_set_beacon_protection : Enter 
+wl_host_event: WLC_E_BSSCFG_UP for idx[0] ifname[wl0] mld_unit[255]
+wl_host_event: WLC_E_BSSCFG_UP for idx[1] ifname[wl0.1] mld_unit[255]
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+CFG80211-ERROR) wl_allocate_wowl_config : Wowl not supported (-23)
+wl1: Initialize puqlmidx to 0
+SMAC: wlc_smacfw_download: CM7 FW downloaded
+wl1: wlc_phydspfw_download, corerev=136, srom_Ntx=4
+wl1: wlc_phydsp_get_fw for corerev=136 & Ntx=4: 4x4 11be wav2 ver 2.22
+wl1: wlc_phydspfw_download done! FW_Ntx=4
+wl1: wlc_macdbg_cpudbg_update_shmx: set cpudbg_config [0x7] at location 1c in SHMX
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 388571400
+SMAC: wlc_smacfw_start: CM7 FW enabled
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 388571400
+wl1: Initialize Rsvd puqs side channel/meta data
+wl1: wlc_ftm_hal_csi_buf_get:1742: hal 3b08118d
+wl1: taf_do_tab_enable: [tab] 0, ret 0
+CSIMON:  CSIMON[1.1.1] Initialization
+CSIMON: M2M usr already registered ...
+wl1 enable 1: q0 frmcnt 0, wrdcnt 0, q1 frmcnt 0, wrdcnt 0
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+wl1: Initialize puqlmidx to 0
+SMAC: wlc_smacfw_download: CM7 FW downloaded
+wl1: wlc_phydspfw_download, corerev=136, srom_Ntx=4
+wl1: wlc_phydsp_get_fw for corerev=136 & Ntx=4: 4x4 11be wav2 ver 2.22
+wl1: wlc_phydspfw_download done! FW_Ntx=4
+wl1: wlc_macdbg_cpudbg_update_shmx: set cpudbg_config [0x7] at location 1c in SHMX
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 388571400
+SMAC: wlc_smacfw_start: CM7 FW enabled
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 388571400
+wl1: Initialize Rsvd puqs side channel/meta data
+wl1: wlc_ftm_hal_csi_buf_get:1742: hal 3b08118d
+wl1: taf_do_tab_enable: [tab] 0, ret 0
+CSIMON:  CSIMON[1.1.1] Initialization
+CSIMON: M2M usr already registered ...
+wl1 enable 1: q0 frmcnt 0, wrdcnt 0, q1 frmcnt 0, wrdcnt 0
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+wl1: Initialize puqlmidx to 0
+SMAC: wlc_smacfw_download: CM7 FW downloaded
+wl1: wlc_phydspfw_download, corerev=136, srom_Ntx=4
+wl1: wlc_phydsp_get_fw for corerev=136 & Ntx=4: 4x4 11be wav2 ver 2.22
+wl1: wlc_phydspfw_download done! FW_Ntx=4
+wl1: wlc_macdbg_cpudbg_update_shmx: set cpudbg_config [0x7] at location 1c in SHMX
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 388571400
+SMAC: wlc_smacfw_start: CM7 FW enabled
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 388571400
+wl1: Initialize Rsvd puqs side channel/meta data
+wl1: wlc_ftm_hal_csi_buf_get:1742: hal 3b08118d
+wl1: taf_do_tab_enable: [tab] 0, ret 0
+CSIMON:  CSIMON[1.1.1] Initialization
+CSIMON: M2M usr already registered ...
+wl1 enable 1: q0 frmcnt 0, wrdcnt 0, q1 frmcnt 0, wrdcnt 2
+CFG80211-ERROR) wl_allocate_wowl_config : Wowl not supported (-23)
+br-lan: port 4(wl1) entered blocking state
+br-lan: port 4(wl1) entered disabled state
+device wl1 entered promiscuous mode
+br-lan: port 4(wl1) entered blocking state
+br-lan: port 4(wl1) entered forwarding state
+br-lan: port 5(wl1.1) entered blocking state
+br-lan: port 5(wl1.1) entered disabled state
+device wl1.1 entered promiscuous mode
+br-lan: port 5(wl1.1) entered blocking state
+br-lan: port 5(wl1.1) entered forwarding state
+net_ratelimit: 3 callbacks suppressed
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+CFG80211-ERROR) wl_allocate_wowl_config : Wowl not supported (-23)
+wl2: Initialize puqlmidx to 0
+SMAC: wlc_smacfw_download: CM7 FW downloaded
+wl2: wlc_phydspfw_download, corerev=137, srom_Ntx=2
+wl2: wlc_phydsp_get_fw for corerev=137 & Ntx=2: 2x2 11be ver 2.22
+wl2: wlc_phydspfw_download done! FW_Ntx=2
+wl2: wlc_macdbg_cpudbg_update_shmx: set cpudbg_config [0x7] at location 1c in SHMX
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 302220000
+SMAC: wlc_smacfw_start: CM7 FW enabled
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 302220000
+wl2: Initialize Rsvd puqs side channel/meta data
+wl2: wlc_ftm_hal_csi_buf_get:1742: hal e5eddc3b
+wl2: taf_do_tab_enable: [tab] 0, ret 0
+CSIMON:  CSIMON[1.1.1] Initialization
+CSIMON: M2M usr already registered ...
+wl2 enable 1: q0 frmcnt 0, wrdcnt 0, q1 frmcnt 0, wrdcnt 0
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+wl2: Initialize puqlmidx to 0
+SMAC: wlc_smacfw_download: CM7 FW downloaded
+wl2: wlc_phydspfw_download, corerev=137, srom_Ntx=2
+wl2: wlc_phydsp_get_fw for corerev=137 & Ntx=2: 2x2 11be ver 2.22
+wl2: wlc_phydspfw_download done! FW_Ntx=2
+wl2: wlc_macdbg_cpudbg_update_shmx: set cpudbg_config [0x7] at location 1c in SHMX
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 302220000
+SMAC: wlc_smacfw_start: CM7 FW enabled
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 302220000
+wl2: Initialize Rsvd puqs side channel/meta data
+wl2: wlc_ftm_hal_csi_buf_get:1742: hal e5eddc3b
+wl2: taf_do_tab_enable: [tab] 0, ret 0
+CSIMON:  CSIMON[1.1.1] Initialization
+CSIMON: M2M usr already registered ...
+wl2 enable 1: q0 frmcnt 0, wrdcnt 0, q1 frmcnt 0, wrdcnt 0
+CFG80211-ERROR) wl_cfg80211_event : Event handler is not created
+wl2: Initialize puqlmidx to 0
+SMAC: wlc_smacfw_download: CM7 FW downloaded
+wl2: wlc_phydspfw_download, corerev=137, srom_Ntx=2
+wl2: wlc_phydsp_get_fw for corerev=137 & Ntx=2: 2x2 11be ver 2.22
+wl2: wlc_phydspfw_download done! FW_Ntx=2
+wl2: wlc_macdbg_cpudbg_update_shmx: set cpudbg_config [0x7] at location 1c in SHMX
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 302220000
+SMAC: wlc_smacfw_start: CM7 FW enabled
+wlc_bmac_configure_macfreq set MACCLK_FREQ to 302220000
+wl2: Initialize Rsvd puqs side channel/meta data
+wl2: wlc_ftm_hal_csi_buf_get:1742: hal e5eddc3b
+wl2: taf_do_tab_enable: [tab] 0, ret 0
+CSIMON:  CSIMON[1.1.1] Initialization
+CSIMON: M2M usr already registered ...
+wl2 enable 1: q0 frmcnt 0, wrdcnt 0, q1 frmcnt 0, wrdcnt 0
+CFG80211-ERROR) wl_allocate_wowl_config : Wowl not supported (-23)
+br-lan: port 6(wl2) entered blocking state
+br-lan: port 6(wl2) entered disabled state
+device wl2 entered promiscuous mode
+br-lan: port 6(wl2) entered blocking state
+br-lan: port 6(wl2) entered forwarding state
+br-lan: port 7(wl2.1) entered blocking state
+br-lan: port 7(wl2.1) entered disabled state
+device wl2.1 entered promiscuous mode
+br-lan: port 7(wl2.1) entered blocking state
+br-lan: port 7(wl2.1) entered forwarding state
+loop0: detected capacity change from 0 to 10240
+EXT4-fs (loop0): mounting ext2 file system using the ext4 subsystem
+EXT4-fs (loop0): warning: mounting unchecked fs, running e2fsck is recommended
+EXT4-fs (loop0): mounted filesystem without journal. Opts: (null). Quota mode: disabled.
+unwind: Index not found f58de550
+net_ratelimit: 3 callbacks suppressed
+CFG80211-ERROR) wl_cfg80211_change_station : WLC_SCB_DEAUTHORIZE error (-30)
+CFG80211-ERROR) wl_cfg80211_change_station : WLC_SCB_DEAUTHORIZE error (-30)
